@@ -1,0 +1,39 @@
+.home {
+  &_container {    
+    height: 80vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    padding: 5% 10%;
+    align-items: center;
+    background-color: #63794b;
+    margin-top: 10vh;
+  }
+  &_description {
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    &_text{
+        text-align: center;
+        height: 80%;
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+    &_arrow {
+      width: 100%;
+      height: 20%;
+      text-align: center;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+  }
+  &_image {
+    height: 100%;
+    background-color: #63794b;
+    border-radius: 24vw 24vw 0px 0px;
+  }
+}

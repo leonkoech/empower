@@ -1,0 +1,25 @@
+@import '../../../../styles/variables.scss';
+
+.container{
+    background-color: $primary;
+    width: 100%;
+    padding: 5% 10%;
+    &_text{
+        width: inherit;
+        margin: 5% 0;
+        h2{
+            margin-bottom: 5%;
+        }
+        div{
+            width: 48%;
+        }
+        &_left{
+            text-align: left;
+        }
+        &_right{
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+}

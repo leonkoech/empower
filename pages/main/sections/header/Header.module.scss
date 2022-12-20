@@ -1,0 +1,51 @@
+.header{
+    &_container{
+        position: fixed;
+        width: 100%;
+        top: 0;
+        
+    }
+    &_phone{
+        display: none;
+        height: 100vh;
+        width: 100vw;
+       &_display{
+        height: 10%;
+        padding: 0 10%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        // display: none;
+       }
+       &_expanded{
+        position: fixed;
+        height: 100%;
+        top: 0;
+        width: inherit;
+        background-color: #FFE9C9;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 10% 15%;
+        align-items: center;
+        &_tabs{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            justify-content: space-between;
+            padding: 20% 0;
+            align-items: center;
+        }
+        display: none;
+       }
+    }
+    &_tablet{
+        
+        background-color: #FFE9C9;
+        height: 10vh;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        // display: none;
+    }
+}
