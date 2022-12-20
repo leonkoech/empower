@@ -1,4 +1,8 @@
-# EMPOWER WEBSITE
+# Empower Website
+
+## Documentation
+
+Uses `NextJS 13.0` a simple `npm run serve` would produce the website
 
 ## TDD skeleton receipt :)
 
@@ -22,8 +26,8 @@ The design takes minimalistic, modern and professional visuals with use of two d
 - [x] Font
   - [x] Type:
       - [x] `Bodoni Moda`
-          -[ ] `Regular`
-          -[ ] `Italic` 
+          - [ ] `Regular`
+          - [ ] `Italic` 
       - [ ] Need better fonts
   - [x] Size: 
       - [x] Desktop: `48`, `40` , `24`, `20`  
@@ -32,7 +36,7 @@ The design takes minimalistic, modern and professional visuals with use of two d
   - [ ] Tab Icon
   - [x] Down Arrow
 - [x] Colors
-  - [x] Primary `#3B6B40`
+  - [x] Primary `#63794B`
   - [x] Secondary `#FFE9C9`
 - [ ] Logo
   - [ ] Illustrator file
