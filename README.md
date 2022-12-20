@@ -59,27 +59,27 @@ The website has to be responsive for mobile, tablet, and desktop. So mockups hav
 
 Taking the _desktop first_ approach
   
--[ ] Desktop Development
-    -[ ] home
-    -[ ] about
-    -[ ] services
-    -[ ] enroll
-    -[ ] team
-    -[ ] contact
--[ ] Tablet Development
-    -[ ] home
-    -[ ] about
-    -[ ] services
-    -[ ] enroll
-    -[ ] team
-    -[ ] contact 
--[ ] Mobile Development
-    -[ ] home
-    -[ ] about
-    -[ ] services
-    -[ ] enroll
-    -[ ] team
-    -[ ] contact
+- [ ] Desktop Development
+    - [ ] home
+    - [ ] about
+    - [ ] services
+    - [ ] enroll
+    - [ ] team
+    - [ ] contact
+- [ ] Tablet Development
+    - [ ] home
+    - [ ] about
+    - [ ] services
+    - [ ] enroll
+    - [ ] team
+    - [ ] contact 
+- [ ] Mobile Development
+    - [ ] home
+    - [ ] about
+    - [ ] services
+    - [ ] enroll
+    - [ ] team
+    - [ ] contact
     
 ### 3. Performance Requirements
 
