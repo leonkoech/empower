@@ -1,0 +1,15 @@
+@import "../../../../styles/variables.scss";
+.enroll{
+    &_container{
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: $primary;
+        flex-direction: row;
+        &_sub{
+            width: 30%;
+            text-align: center;
+        }
+    }
+}

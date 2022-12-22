@@ -1,0 +1,12 @@
+@import "../../../../styles/variables.scss";
+.card{
+    &_container{
+        width: 90%;
+        height: 10vh;
+        background-color: $primary_12;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}

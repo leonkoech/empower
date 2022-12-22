@@ -1,13 +1,14 @@
 import style from "./Home.module.scss";
-import Image from "next/Image";
 import image from "../../../../public/image.jpg";
+import {landing} from "../../../../public/shared/modules/landing"
+import Italicized from "../../../../public/shared/components/italicized/Italicized";
+
 const HomeSection = () => {
   return (
     <div className={style.home_container}>
       <div className={style.home_description}>
         <div className={style.home_description_text}> 
-          The awesome mission goes here, it should be longer than this. so
-          Empower!
+          <Italicized word={landing}></Italicized>
         </div>
         <div className={style.home_description_arrow}>
           <span className="material-symbols-outlined">expand_more</span>

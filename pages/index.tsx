@@ -4,6 +4,8 @@ import Header from "./main/sections/header/Header";
 import HomeSection from "./main/sections/home/Home";
 import About from "./main/sections/about/About";
 import Footer from "./main/sections/footer/Footer";
+import Service from "./main/sections/services_team/Service";
+import Enroll from "./main/sections/enroll/Enroll";
 
 export default function Home() {
   return (
@@ -28,6 +30,8 @@ export default function Home() {
         <Header></Header>
         <HomeSection></HomeSection>
         <About></About>
+        <Service></Service>
+        <Enroll></Enroll>
         <Footer></Footer>
       </main>
     </>

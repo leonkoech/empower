@@ -1,3 +1,4 @@
+import { italic } from "./italics";
 export const test_data =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut\
@@ -9,18 +10,21 @@ export const test_data =
 
 export const about_data = [
   {
-    title: "About",
-    italics: "Empower",
+    title:{
+    text: `About ${italic}`,
+    italics: ["Empower"]},
     details: test_data
   },
   {
-    title: "Our",
-    italics: "Vision",
+    title:{
+      text: `Our ${italic}`,
+      italics: ["Vision"]},
     details: test_data
   },
   {
-    title: "Our",
-    italics: "Mission",
+    title:{
+      text: `Our Mission ${italic}`,
+      italics: ["Mission"]},
     details: test_data
   }
 ];
