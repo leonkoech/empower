@@ -1,5 +1,5 @@
+import { italics } from "./italics"
 export interface about{
-    title: string,
-    italics: string,
+    title: italics,
     details: string,
 }

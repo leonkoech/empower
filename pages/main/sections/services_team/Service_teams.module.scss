@@ -1,0 +1,16 @@
+@import "../../../../styles/variables.scss";
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: $secondary;
+    padding: 5% 10%;
+    &__cards{
+        width: 100%;
+        display: grid;
+        grid-template-columns: 23% 23% 23% 23%;
+        row-gap: 5vh;
+        column-gap: 2%;
+        padding: 5% 0;
+    }
+}
