@@ -1,3 +1,6 @@
+@import '../../../../styles/theme';
+@import '../../../../styles/variables';
+
 .header{
     &_container{
         position: fixed;
@@ -22,12 +25,12 @@
         height: 100%;
         top: 0;
         width: inherit;
-        background-color: #FFE9C9;
         display: flex;
         justify-content: space-between;
         flex-direction: column;
         padding: 10% 15%;
         align-items: center;
+        @include theme($pri);
         &_tabs{
             display: flex;
             flex-direction: column;
@@ -41,11 +44,12 @@
     }
     &_tablet{
         
-        background-color: #FFE9C9;
         height: 10vh;
         display: flex;
         justify-content: space-around;
         align-items: center;
+        
+        @include theme($pri);
         // display: none;
     }
 }

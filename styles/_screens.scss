@@ -1,0 +1,32 @@
+@import './variables';
+
+@mixin phone-up {
+    @media (min-width: $phone) {
+      @content;
+    }
+  }
+  @mixin tablet-up {
+    @media (min-width: $tablet) {
+      @content;
+    }
+  }
+  @mixin tablet-down {
+    @media (max-width: $tablet) {
+      @content;
+    }
+  }
+  @mixin desktop-down {
+    @media (max-width: $large) {
+      @content;
+    }
+  }
+  @mixin desktop-up {
+    @media (min-width: $large) {
+      @content;
+    }
+  }
+  @mixin large-screen {
+    @media (min-width: $extra_large) {
+      @content;
+    }
+  }

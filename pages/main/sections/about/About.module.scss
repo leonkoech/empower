@@ -1,7 +1,9 @@
-@import '../../../../styles/variables.scss';
+@import '../../../../styles/theme';
+@import '../../../../styles/variables';
 
 .container{
-    background-color: $primary;
+    @include theme($pri);
+    
     width: 100%;
     padding: 5% 10%;
     &_text{

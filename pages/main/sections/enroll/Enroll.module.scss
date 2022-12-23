@@ -1,12 +1,14 @@
-@import "../../../../styles/variables.scss";
+@import '../../../../styles/theme';
+@import '../../../../styles/variables';
+
 .enroll{
     &_container{
         min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: $primary;
         flex-direction: row;
+        @include theme($pri);
         &_sub{
             width: 30%;
             text-align: center;
