@@ -15,8 +15,8 @@ const Service = () =>{
                     <h2><Italicized word={section.title}></Italicized></h2>
                     <div className={style.container__cards}>
                         {
-                            section.list.map((v: string)=>{
-                                return(<Card title={v}></Card>)
+                            section.list.map((v: string, index: number)=>{
+                                return(<Card title={v} key={index}></Card>)
                             })
                         }
                     </div>
