@@ -3,15 +3,12 @@
 
 .container{
     @include theme($pri);
-    
+
     width: 100%;
     padding: 5% 10%;
     &_text{
         width: inherit;
         margin: 5% 0;
-        h2{
-            margin-bottom: 5%;
-        }
         div{
             width: 48%;
         }

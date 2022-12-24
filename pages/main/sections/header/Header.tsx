@@ -32,9 +32,9 @@ const Header = () => {
       <div className={styles.header_tablet}>
         {tabs.map((tab: string, index: number) => {
           if (index === 3) {
-            return <span key={index}>LOGO</span>;
+            return <p key={index}>LOGO</p>;
           } else {
-            return <span key={index}>{tab}</span>;
+            return <p key={index}>{tab}</p>;
           }
         })}
       </div>

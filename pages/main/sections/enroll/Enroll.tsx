@@ -7,7 +7,7 @@ const Enroll=()=>{
         <div className={style.enroll_container}>
             <div className={style.enroll_container_sub}>
                 <h2><Italicized word={enroll_data.title}></Italicized></h2>
-                <p>{enroll_data.description}</p>
+                <p>{enroll_data.details}</p>
             </div>
         </div>
     )

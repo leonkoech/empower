@@ -8,7 +8,7 @@
     }
     @if $type == $pri{
       background-color: $primary;
-      @include fonts($secondary)
+      @include fonts($secondary-dark)
     }
     @if $type == $ter{
       background-color: $tertiary;

@@ -1,9 +1,9 @@
 @use "sass:math";
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@0,6..96;1,6..96&family=Cedarville+Cursive&family=Playfair+Display:ital@0;1&display=swap');
-
-$bodoni-moda:  'Bodoni Moda', serif;;
-
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@0,6..96;1,6..96&family=Cantata+One&family=Ibarra+Real+Nova:ital@0;1&family=Suranna&display=swap');
+//$font-body:  'Bodoni Moda', serif;
+$font-body:  'Cantata One', serif;
+$font-italic: 'Ibarra Real Nova', serif;
+$font: 'Suranna', serif;
 
 $text-fluidity-start: 320px;
 // end fluid type
@@ -35,7 +35,7 @@ $text-fluidity-end: 2500px;
 
 @mixin headline-bold() {
   @include text-size(28px, 72px);
-  font-family:  $bodoni-moda;
+  font-family:  $font;
   letter-spacing: -0.1vw;
   line-height: 1.1;
   word-spacing: 0.1vw;
@@ -44,7 +44,7 @@ $text-fluidity-end: 2500px;
 
 @mixin body-large-bold() {
   @include text-size(19px, 32px);
-  font-family:  $bodoni-moda;
+  font-family:  $font;
   font-feature-settings: 'ss02';
   letter-spacing: 0.1px;
   line-height: 1.5;
@@ -52,8 +52,8 @@ $text-fluidity-end: 2500px;
 }
 
 @mixin body-regular() {
-  @include text-size(16px, 21px);
-  font-family: $bodoni-moda;
+  @include text-size(16px, 16px);
+  font-family: $font;
   font-feature-settings: 'ss02';
   letter-spacing: 0.4px;
   line-height: 1.85;
@@ -61,7 +61,7 @@ $text-fluidity-end: 2500px;
 }
 @mixin body-small() {
   @include text-size(12px, 19px);
-  font-family: $bodoni-moda;
+  font-family: $font;
   font-feature-settings: 'ss02';
   letter-spacing: 0.4px;
   line-height: 1.65;

@@ -1,7 +1,7 @@
-import { italics } from "../models/italics"
-import { italic } from "./italics"
+import { italics } from "../models/italics";
+import { italic } from "./italics";
 
-export const landing={
-    text: `I have no idea what to type in here, go ${italic}`,
-    italics: ["Empower"]
-} as italics
+export const landing: italics = {
+  text: `I have no idea what to type in here, go ${italic}`,
+  italics: ["Empower"]
+};
