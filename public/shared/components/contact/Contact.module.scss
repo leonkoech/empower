@@ -1,4 +1,8 @@
+@import '../../../../styles/variables';
+@import '../../../../styles/theme';
+
 .contact{
+    @include theme($sec);
     &_card{
         &_container{
             text-align: center;
@@ -8,6 +12,9 @@
             align-items: center;
             span{
                 margin-bottom: 5vh;
+            }
+            p{
+                margin-bottom: 1vh;
             }
         }
     }

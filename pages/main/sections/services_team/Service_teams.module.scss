@@ -1,9 +1,11 @@
-@import "../../../../styles/variables.scss";
+@import '../../../../styles/theme';
+@import '../../../../styles/variables';
 
 .container{
+    @include theme($sec);
+    
     width: 100%;
     min-height: 100vh;
-    background-color: $secondary;
     padding: 5% 10%;
     &__cards{
         width: 100%;

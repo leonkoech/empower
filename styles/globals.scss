@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@0,6..96;1,6..96&family=Cedarville+Cursive&family=Playfair+Display:ital@0;1&display=swap');
-
 
 * {
   box-sizing: border-box;
@@ -11,6 +9,23 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: 'Bodoni Moda', serif;
+  // font-family: 'Bodoni Moda', serif;
 }
+// h1{
+//   span{
+//      @include headline-bold();
+//   }
+// }
+// h2{
+//   @include header-display();
+//   span{
+//     @include body-large-bold();
+//   }
+// }
+// p{
+//  @include body-regular();
+// }
+// span{
+//   @include body-small();
+// }
 

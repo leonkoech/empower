@@ -1,0 +1,17 @@
+@import './variables';
+@import './fonts';
+
+@mixin theme($type){
+    @if $type == $sec{
+      background-color: $secondary;
+      @include fonts($primary)
+    }
+    @if $type == $pri{
+      background-color: $primary;
+      @include fonts($secondary-dark)
+    }
+    @if $type == $ter{
+      background-color: $tertiary;
+      @include fonts($primary)
+    }
+  }

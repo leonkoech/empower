@@ -7,8 +7,8 @@ const Contact_Card = ({title,list}: contacts) => {
         <div className={style.contact_card_container}>
             <span>{title}</span>
             {
-                list.map((val:string) => {
-                    return <p>{val}</p>
+                list.map((val:string, index: number) => {
+                    return (<p key={index}>{val}</p>)
                 })
             }
         </div>

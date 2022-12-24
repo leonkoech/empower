@@ -1,4 +1,4 @@
-@import "../../../../styles/variables.scss";
+@import "../../../../styles/variables";
 .card{
     &_container{
         width: 90%;
@@ -7,6 +7,5 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        
     }
 }

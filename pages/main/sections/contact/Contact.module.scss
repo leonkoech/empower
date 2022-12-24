@@ -1,11 +1,13 @@
-@import '../../../../styles/variables.scss';
+@import '../../../../styles/theme';
+@import '../../../../styles/variables';
 
 .contact{
     &_container{
-        min-height: 100vh;
+        @include theme($sec);
+        
+        min-height: 80vh;
         width: 100%;
-        background-color: #63794b;
-        padding: 5% 10%;
+        padding: 0% 10%;
         display: flex;
         flex-direction: column;
         justify-content: space-around;

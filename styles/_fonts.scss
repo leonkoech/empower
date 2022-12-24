@@ -1,0 +1,40 @@
+@import "./type";
+
+@mixin fonts($color) {
+  h1 {
+    color: $color;
+    font-weight: normal;
+    span {
+      @include headline-bold();
+      color: $color;
+      i {
+        font-family: $font-italic;
+      }
+    }
+  }
+  h2 {
+    @include body-large-bold();
+    color: $color;
+    font-weight: normal;
+    margin-bottom: 5%;
+    span {
+      @include body-large-bold();
+      color: $color;
+      
+      i {
+        font-family: $font-italic;
+      }
+    }
+  }
+  p {
+    @include body-regular();
+    color: $color;
+    font-family: $font-body;
+  }
+  span {
+    @include body-small();
+    color: $color;
+    
+    // font-family: $font-body;
+  }
+}

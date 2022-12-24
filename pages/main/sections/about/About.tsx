@@ -19,7 +19,7 @@ const About = () => {
               <h2>
                 <Italicized word={value.title}></Italicized>
               </h2>
-              <span>{value.details}</span>
+              <p>{value.details}</p>
             </div>
           </div>
         );

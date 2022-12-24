@@ -1,4 +1,6 @@
 import { italic } from "./italics";
+import { about } from "../models/about";
+
 export const test_data =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, \
   sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut\
@@ -8,23 +10,26 @@ export const test_data =
     sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt \
     mollit anim id est laborum.";
 
-export const about_data = [
+export const about_data: about[] = [
   {
-    title:{
-    text: `About ${italic}`,
-    italics: ["Empower"]},
+    title: {
+      text: `About ${italic}`,
+      italics: ["Empower"]
+    },
     details: test_data
   },
   {
-    title:{
+    title: {
       text: `Our ${italic}`,
-      italics: ["Vision"]},
+      italics: ["Vision"]
+    },
     details: test_data
   },
   {
-    title:{
-      text: `Our Mission ${italic}`,
-      italics: ["Mission"]},
+    title: {
+      text: `Our ${italic}`,
+      italics: ["Mission"]
+    },
     details: test_data
   }
 ];
