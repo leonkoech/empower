@@ -1,23 +1,31 @@
 @import '../../../../styles/theme';
 @import '../../../../styles/variables';
+@import '../../../../styles/screens';
 
 .header{
     &_container{
         position: fixed;
         width: 100%;
         top: 0;
+       
         
     }
     &_phone{
-        display: none;
+        @include tablet-up{
+            display: none;
+        }
+        
         height: 100vh;
         width: 100vw;
        &_display{
+        @include theme($pri);
         height: 10%;
-        padding: 0 10%;
+        padding: 0 $padding-side-page;
+
         display: flex;
         justify-content: space-between;
         align-items: center;
+
         // display: none;
        }
        &_expanded{
@@ -25,31 +33,85 @@
         height: 100%;
         top: 0;
         width: inherit;
+
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        padding: 10% 15%;
+
+        padding: 0% 15% 10% 15%;
         align-items: center;
+        
         @include theme($pri);
-        &_tabs{
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-            justify-content: space-between;
-            padding: 20% 0;
-            align-items: center;
+
+        
+        transition: margin-left 1s;
+        &_closed{
+            margin-left: 100vw;
         }
-        display: none;
+        &_opened{
+            margin-left: 0;
+        }
+        &_controls{
+            height: 10vh;
+            display: flex;
+            justify-content: center;
+        }
+        &_tabs{
+            display: flex; 
+            justify-content: space-between;
+            flex-direction: column;
+            align-items: center;
+
+            height: 100%; 
+            padding: 20% 0;
+        }
+        // display: none;
+       }
+       button{
+        background-color: transparent;
+        outline: transparent;
+        border: none;
+        
        }
     }
     &_tablet{
-        
+        @include tablet-down{
+            display: none;
+        }
+        padding: 0 $padding-side-page;
         height: 10vh;
+        
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: center;
         
         @include theme($pri);
         // display: none;
+    }
+    &_menu_icon{
+        width: 30px;
+        height: 30px;
+        text-align: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+    }
+    &_buttons{
+        background-color: transparent;
+        outline: transparent;
+        border: 0px transparent;
+        width: 6vw;
+        height: 5vh;
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        &:hover{
+            cursor: pointer;
+            border-bottom: 1px solid $secondary;
+            border-top: 1px solid $secondary;
+        }
+        &_active{
+            border-bottom: 1px solid $secondary;
+        }
     }
 }

@@ -1,7 +1,7 @@
 // !important
 // color setup variables
 $secondary:#5f7363;
-$primary: #f9fadc;
+$primary: #F9FADC;
 $tertiary: #1D1D1D;
 $primary_12: #FFE9C912;
 $secondary-dark: #2D382F;
@@ -11,6 +11,7 @@ $secondary-dark: #2D382F;
 $sec: "secondary";
 $pri: "primary";
 $ter: "tertiary";
+$pri_12: "primary_12";
 
 // !important
 // screen size variables
@@ -18,3 +19,7 @@ $phone: 600px;
 $tablet: 900px;
 $large: 1200px;
 $extra_large: 1800px;
+
+// shared spacing
+$margin-side-page: 10%;
+$padding-side-page: 15%;

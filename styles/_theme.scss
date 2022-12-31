@@ -10,6 +10,10 @@
       background-color: $primary;
       @include fonts($secondary-dark)
     }
+    @if $type == $pri_12{
+      background-color: $primary_12;
+      @include fonts($primary)
+    }
     @if $type == $ter{
       background-color: $tertiary;
       @include fonts($primary)
