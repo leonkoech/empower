@@ -25,7 +25,7 @@ The design takes minimalistic, modern and professional visuals with use of two d
   - [ ] Update
 - [x] Font
   - [x] Type:
-      - [x]Italics: `Ibarra Real Nova`
+      - [x] Italics: `Ibarra Real Nova`
       - [x] default: `Suranna`;
       - [x] regular: `Raleway`; 
   - [x] Size: 
