@@ -1,9 +1,13 @@
 @use "sass:math";
 @import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz@0,6..96;1,6..96&family=Cantata+One&family=Ibarra+Real+Nova:ital@0;1&family=Suranna&display=swap');
-//$font-body:  'Bodoni Moda', serif;
-$font-body:  'Cantata One', serif;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+
+// $font-body:  'Cantata One', serif;
 $font-italic: 'Ibarra Real Nova', serif;
 $font: 'Suranna', serif;
+$font-body: 'Raleway', sans-serif;
+
+
 
 $text-fluidity-start: 320px;
 // end fluid type
@@ -43,7 +47,7 @@ $text-fluidity-end: 2500px;
 
 
 @mixin body-large-bold() {
-  @include text-size(19px, 32px);
+  @include text-size(24px, 42px);
   font-family:  $font;
   font-feature-settings: 'ss02';
   letter-spacing: 0.1px;
@@ -52,7 +56,7 @@ $text-fluidity-end: 2500px;
 }
 
 @mixin body-regular() {
-  @include text-size(16px, 16px);
+  @include text-size(12px, 16px);
   font-family: $font;
   font-feature-settings: 'ss02';
   letter-spacing: 0.4px;

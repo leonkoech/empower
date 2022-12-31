@@ -4,10 +4,18 @@ import arrow_down from "../../../../public/assets/icons/arrow.svg";
 import { landing } from "../../../../public/shared/modules/landing";
 import Italicized from "../../../../public/shared/components/italicized/Italicized";
 import Image from "next/image";
+import { useEffect, useRef } from "react";
+
+export var home_height=0;
 
 const HomeSection = () => {
+
+  const ref = useRef(null)
+  useEffect(()=>{
+    home_height = (ref.current as any).offsetHeight;
+  })
   return (
-    <div className={style.home_container}>
+    <div ref={ref} className={style.home_container}>
       <div className={style.home_description}>
         <div className={style.home_description_text}>
           <h1>
@@ -18,8 +26,11 @@ const HomeSection = () => {
           {/* <span className="material-symbols-outlined">expand_more</span> */}
           <Image
             src={arrow_down}
-            alt="more"
+            alt="next section"
             className={style.home_description_arrow_icon}
+            onClick={()=>{
+              window.scrollTo({top: home_height,behavior:"smooth"})
+            }}
           />
         </div>
       </div>
@@ -28,7 +39,7 @@ const HomeSection = () => {
         style={{
           backgroundImage: `url(${image.src})`,
           backgroundSize: `cover`,
-          backgroundPositionX: `center`
+          backgroundPositionX: `60%`
         }}
       ></div>
     </div>

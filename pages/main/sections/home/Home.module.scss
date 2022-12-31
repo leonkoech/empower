@@ -1,5 +1,6 @@
-@import '../../../../styles/theme';
-@import '../../../../styles/variables';
+@import "../../../../styles/theme";
+@import "../../../../styles/variables";
+@import "../../../../styles/screens";
 
 .home {
   &_container {
@@ -7,24 +8,35 @@
     width: 100%;
     display: grid;
     grid-template-columns: 70% 30%;
-    padding: 5% 10%;
+    padding: 5% $padding-side-page;
     align-items: center;
     margin-top: 10vh;
     @include theme($sec);
+    @include tablet-down{
+      display: flex;
+      flex-direction: column-reverse;
+    }
   }
   &_description {
     height: 100%;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     flex-direction: column;
+    justify-content: flex-end;
+    @include tablet-down{
+      height:50vh;
+    }
     &_text {
       text-align: center;
       height: 80%;
-      width: 72%;
-      justify-content: center;
-      align-items: center;
+      
       display: flex;
+      align-items: center;
+      justify-content: center;
+
+      @include tablet-up{
+        width: 72%; 
+      }
     }
     &_arrow {
       width: 100%;
@@ -33,12 +45,40 @@
       display: flex;
       align-items: flex-end;
       justify-content: center;
-      
+      -webkit-animation: up-down 0.5s infinite alternate;
+      animation: up-down 0.5s infinite alternate;
+      &:hover {
+        cursor: pointer;
+        
+    
+      }
     }
   }
   &_image {
     height: 100%;
     background-color: #63794b;
     border-radius: 24vw 24vw 0px 0px;
+    @include tablet-down{
+      height: 40vh;
+      aspect-ratio: 3/4;
+      border-radius: 24vh 24vh 0px 0px;
+    }
+  }
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-15px);
   }
 }

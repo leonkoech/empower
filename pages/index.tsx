@@ -1,5 +1,4 @@
 import Head from "next/head";
-import { Inter } from "@next/font/google";
 import Header from "./main/sections/header/Header";
 import HomeSection from "./main/sections/home/Home";
 import About from "./main/sections/about/About";
@@ -8,7 +7,10 @@ import Service from "./main/sections/services_team/Service";
 import Enroll from "./main/sections/enroll/Enroll";
 import Contact from "./main/sections/contact/Contact";
 
+
+
 export default function Home() {
+  
   return (
     <>
       <Head>
