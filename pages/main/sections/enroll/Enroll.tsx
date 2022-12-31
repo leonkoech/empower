@@ -12,10 +12,10 @@ const Enroll = () => {
   return (
     <div ref={ref} className={style.enroll_container}>
       <div className={style.enroll_container_sub}>
-        <h2>
+        <h2 role="term">
           <Italicized word={enroll_data.title}></Italicized>
         </h2>
-        <p>{enroll_data.details}</p>
+        <p role="description">{enroll_data.details}</p>
       </div>
     </div>
   );

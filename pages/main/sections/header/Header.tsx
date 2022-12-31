@@ -87,7 +87,7 @@ const Header = () => {
 
   function current_tab() {
     let current_position = window.pageYOffset;
-    console.log(window.pageYOffset);
+    // console.log(window.pageYOffset);
     for (let [key, value] of Object.entries(tab_heights)) {
       if (current_position >= value.start && current_position < value.end) {
         select_tab(key);
@@ -103,6 +103,8 @@ const Header = () => {
         <div className={styles.header_phone_display}>
           <h1>Empower.</h1>
           <button
+            aria-label="open menu"
+            type="button"
             onClick={() => {
               menu_listener(true);
             }}
@@ -123,6 +125,9 @@ const Header = () => {
         >
           <div className={`${styles.header_phone_expanded_controls}`}>
             <button
+              aria-label="close menu"
+              tabIndex={-1}
+              type="button"
               onClick={() => {
                 menu_listener(false);
               }}
@@ -141,19 +146,25 @@ const Header = () => {
                 // }
                 return (
                   <button
-                  key={index}
+                 
+                    tabIndex={-1}
+                    aria-label={tab}
+                    type="button"
+                    aria-pressed="false"
+                    key={index}
                     className={`${styles.header_buttons} ${
                       selected_tab == tab ? styles.header_buttons_active : ""
                     }`}
-                    aria-pressed="false"
+                    
                     onClick={() => {
                       window.scrollTo({
                         top: (tab_heights as any)[tab].start,
                         behavior: "smooth"
                       });
+                      menu_listener(false);
                     }}
                   >
-                    <p >{tab}</p>
+                    <p>{tab}</p>
                   </button>
                 );
               }
@@ -167,7 +178,11 @@ const Header = () => {
             return <p key={index}>LOGO</p>;
           } else {
             return (
-              <button key={index}
+              <button
+                tabIndex={1}
+                aria-label={tab}
+                type="button"
+                key={index}
                 className={`${styles.header_buttons} ${
                   selected_tab == tab ? styles.header_buttons_active : ""
                 }`}

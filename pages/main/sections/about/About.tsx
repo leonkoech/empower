@@ -22,10 +22,10 @@ const About = () => {
             }`}
           >
             <div >
-              <h2>
+              <h2 role="term">
                 <Italicized word={value.title}></Italicized>
               </h2>
-              <p>{value.details}</p>
+              <p role="definition" >{value.details}</p>
             </div>
           </div>
         );

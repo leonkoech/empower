@@ -28,6 +28,9 @@ const HomeSection = () => {
             src={arrow_down}
             alt="next section"
             className={style.home_description_arrow_icon}
+            role="button"
+            tabIndex={1}
+            aria-label="scroll down"
             onClick={()=>{
               window.scrollTo({top: home_height,behavior:"smooth"})
             }}

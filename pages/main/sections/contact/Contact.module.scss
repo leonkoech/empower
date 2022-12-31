@@ -25,7 +25,7 @@
             flex-direction: row;
         }
         @include tablet-down{
-            margin-top: 20%;
+            // margin-top: 20%;
             &_bottom{
                 flex-direction: column;
             }
