@@ -141,6 +141,7 @@ const Header = () => {
                 // }
                 return (
                   <button
+                  key={index}
                     className={`${styles.header_buttons} ${
                       selected_tab == tab ? styles.header_buttons_active : ""
                     }`}
@@ -152,7 +153,7 @@ const Header = () => {
                       });
                     }}
                   >
-                    <p key={index}>{tab}</p>
+                    <p >{tab}</p>
                   </button>
                 );
               }
@@ -166,7 +167,7 @@ const Header = () => {
             return <p key={index}>LOGO</p>;
           } else {
             return (
-              <button
+              <button key={index}
                 className={`${styles.header_buttons} ${
                   selected_tab == tab ? styles.header_buttons_active : ""
                 }`}
@@ -178,7 +179,7 @@ const Header = () => {
                   });
                 }}
               >
-                <span key={index}>{tab}</span>
+                <span>{tab}</span>
               </button>
             );
           }
