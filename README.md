@@ -25,10 +25,9 @@ The design takes minimalistic, modern and professional visuals with use of two d
   - [ ] Update
 - [x] Font
   - [x] Type:
-      - [x] `Bodoni Moda`
-          - [ ] `Regular`
-          - [ ] `Italic` 
-      - [ ] Need better fonts
+      - [x]Italics: `Ibarra Real Nova`
+      - [x] default: `Suranna`;
+      - [x] regular: `Raleway`; 
   - [x] Size: 
       - [x] Desktop: `48`, `40` , `24`, `20`  
       - [x] Mobile: `48`,`24`,`20`
@@ -63,27 +62,27 @@ The website has to be responsive for mobile, tablet, and desktop. So mockups hav
 
 Taking the _desktop first_ approach
   
-- [ ] Desktop Development
-    - [ ] home
-    - [ ] about
-    - [ ] services
-    - [ ] enroll
-    - [ ] team
-    - [ ] contact
-- [ ] Tablet Development
-    - [ ] home
-    - [ ] about
-    - [ ] services
-    - [ ] enroll
-    - [ ] team
-    - [ ] contact 
-- [ ] Mobile Development
-    - [ ] home
-    - [ ] about
-    - [ ] services
-    - [ ] enroll
-    - [ ] team
-    - [ ] contact
+- [x] Desktop Development
+    - [x] home
+    - [x] about
+    - [x] services
+    - [x] enroll
+    - [x] team
+    - [x] contact
+- [x] Tablet Development
+    - [x] home
+    - [x] about
+    - [x] services
+    - [x] enroll
+    - [x] team
+    - [x] contact 
+- [x] Mobile Development
+    - [x] home
+    - [x] about
+    - [x] services
+    - [x] enroll
+    - [x] team
+    - [x] contact
     
 ### 3. Performance Requirements
 
