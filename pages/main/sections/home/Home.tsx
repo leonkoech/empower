@@ -8,11 +8,12 @@ import { useEffect, useRef } from "react";
 
 export var home_height=0;
 
-const HomeSection = () => {
+const HomeSection = ({sendHeight}:any) => {
 
   const ref = useRef(null)
   useEffect(()=>{
     home_height = (ref.current as any).offsetHeight;
+    sendHeight((ref.current as any).offsetHeight);
   })
   return (
     <div ref={ref} className={style.home_container}>
@@ -22,8 +23,7 @@ const HomeSection = () => {
             <Italicized word={landing}></Italicized>
           </h1>
         </div>
-        <div className={style.home_description_arrow}>
-          {/* <span className="material-symbols-outlined">expand_more</span> */}
+        {/* <div className={style.home_description_arrow}>
           <Image
             src={arrow_down}
             alt="next section"
@@ -35,7 +35,7 @@ const HomeSection = () => {
               window.scrollTo({top: home_height,behavior:"smooth"})
             }}
           />
-        </div>
+        </div> */}
       </div>
       <div
         className={style.home_image}

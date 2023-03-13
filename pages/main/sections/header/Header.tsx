@@ -3,13 +3,7 @@ import Image from "next/image";
 import menu from "../../../../public/assets/icons/menu.svg";
 import close from "../../../../public/assets/icons/close.svg";
 import React, { useState, useRef, useEffect } from "react";
-import { home_height } from "../home/Home";
-import { about_height } from "../about/About";
-import { service_height, service_team_height } from "../services_team/Service";
-import { team_height } from "../services_team/Service";
-import { enroll_height } from "../enroll/Enroll";
-import { contact_height } from "../contact/Contact";
-import { footer_height } from "../footer/Footer";
+import { useRouter } from "next/router";
 
 const tabs = [
   "home",
@@ -20,83 +14,18 @@ const tabs = [
   "enroll",
   "contact"
 ];
+type props = {
+  selected_tab: string
+}
 export var header_height = 0;
-const Header = () => {
-  let tab_heights = {
-    home: { start: 0, end: home_height + header_height },
-    about: {
-      start: home_height + header_height,
-      end: home_height + about_height + header_height
-    },
-    services: {
-      start: home_height + about_height + header_height,
-      end: home_height + about_height + header_height + service_height
-    },
-    team: {
-      start: home_height + about_height + header_height + service_height,
-      end:
-        home_height +
-        about_height +
-        header_height +
-        service_height +
-        2 * team_height
-    },
-    enroll: {
-      start:
-        home_height +
-        about_height +
-        header_height +
-        service_height +
-        2 * team_height,
-      end:
-        home_height +
-        about_height +
-        header_height +
-        service_team_height +
-        enroll_height
-    },
-    contact: {
-      start:
-        home_height +
-        about_height +
-        header_height +
-        service_team_height +
-        enroll_height,
-      end:
-        home_height +
-        about_height +
-        header_height +
-        service_team_height +
-        enroll_height +
-        contact_height +
-        footer_height
-    }
-  };
+
+const Header = ({selected_tab}:props) => {
+  const router = useRouter()
 
   const ref = useRef(null);
-  useEffect(() => {
-    header_height = (ref.current as any).offsetHeight;
-  });
-
-  useEffect(() => {
-    // clean up code
-    window.removeEventListener("scroll", current_tab);
-    window.addEventListener("scroll", current_tab, { passive: true });
-    return () => window.removeEventListener("scroll", current_tab);
-  }, []);
-
-  function current_tab() {
-    let current_position = window.pageYOffset;
-    // console.log(window.pageYOffset);
-    for (let [key, value] of Object.entries(tab_heights)) {
-      if (current_position >= value.start && current_position < value.end) {
-        select_tab(key);
-      }
-    }
-  }
 
   const [open_state, menu_listener] = useState(false);
-  const [selected_tab, select_tab] = useState("home");
+
   return (
     <div ref={ref} className={styles.header_container}>
       <div className={styles.header_phone}>
@@ -146,7 +75,6 @@ const Header = () => {
                 // }
                 return (
                   <button
-                 
                     tabIndex={-1}
                     aria-label={tab}
                     type="button"
@@ -157,10 +85,11 @@ const Header = () => {
                     }`}
                     
                     onClick={() => {
-                      window.scrollTo({
-                        top: (tab_heights as any)[tab].start,
-                        behavior: "smooth"
-                      });
+                      // console.group(tab_heights)
+                      // window.scrollTo({
+                      //   top: (tab_heights as any)[tab].start,
+                      //   behavior: "smooth"
+                      // });
                       menu_listener(false);
                     }}
                   >
@@ -186,12 +115,9 @@ const Header = () => {
                 className={`${styles.header_buttons} ${
                   selected_tab == tab ? styles.header_buttons_active : ""
                 }`}
-                aria-pressed="false"
                 onClick={() => {
-                  window.scrollTo({
-                    top: (tab_heights as any)[tab].start,
-                    behavior: "smooth"
-                  });
+                  tab == "home"?router.push("/"):router.push(tab) 
+                  // console.log(tab)
                 }}
               >
                 <span>{tab}</span>

@@ -10,7 +10,7 @@ const Footer = () => {
   return (
     <div ref={ref} className={style.footer_container}>
       <span>Empower</span>
-      <span>2022</span>
+      <span>2023 ©</span>
     </div>
   );
 };
