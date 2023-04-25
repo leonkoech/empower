@@ -97,10 +97,18 @@
         justify-content: center;
 
     }
+    &_logo{
+        padding: 15px;
+        text-align: center;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+
+    }
     &_buttons{
         background-color: transparent;
         border: 0px transparent;
-        width: 100%;
+        width: 80%;
         height: 5vh;
         border-bottom: 1px solid transparent;
         border-top: 1px solid transparent;

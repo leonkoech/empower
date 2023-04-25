@@ -1,6 +1,7 @@
 import styles from "./Header.module.scss";
 import Image from "next/image";
 import menu from "../../../../public/assets/icons/menu.svg";
+import logo from "../../../../public/assets/images/logo.png"
 import close from "../../../../public/assets/icons/close.svg";
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
@@ -10,7 +11,7 @@ const tabs = [
   "about",
   "services",
   "logourl",
-  "team",
+  "treatment",
   "enroll",
   "contact"
 ];
@@ -104,7 +105,15 @@ const Header = ({selected_tab}:props) => {
       <div className={styles.header_tablet}>
         {tabs.map((tab: string, index: number) => {
           if (index === 3) {
-            return <p key={index}>LOGO</p>;
+            // TODO:
+            return <Image
+            key={index}
+            src={logo}
+            alt="home"
+            className={styles.header_logo}
+          />
+          
+          // <p >LOGO</p>;
           } else {
             return (
               <button
