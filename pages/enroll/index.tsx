@@ -27,7 +27,11 @@ const Enroll = () => {
         {
           enroll_data.map((section: any, index: any)=>{
             return(
-              <div key={index} className={style.enroll_container_sub}>
+              <div key={index}  className={` ${
+                index % 2 == 0
+                  ? style.enroll_container_left
+                  : style.enroll_container_right
+              }`}>
                 <h2 role="term">
                   <Italicized word={section.title}></Italicized>
                 </h2>

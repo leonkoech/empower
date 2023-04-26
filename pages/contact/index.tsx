@@ -10,13 +10,10 @@ import { useEffect, useRef } from "react";
 import Head from "next/head";
 import Header from "../main/sections/header/Header";
 import Footer from "../main/sections/footer/Footer";
-export var contact_height = 0;
 const Contact = () => {
   const iframe_src = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJiyN69GoUK4cRL0xMGoEWsa4&key=AIzaSyCmohzLBls4xBJXze9aHtToLWDPttDzDEg&zoom=18";
   const ref = useRef(null);
-  useEffect(() => {
-    contact_height = (ref.current as any).offsetHeight;
-  });
+ 
   return (
     <>
     <Head>
@@ -46,7 +43,6 @@ const Contact = () => {
         })}
       </div>
       <iframe width="100%" height="450"  style={{border:0}} loading="lazy" allowFullScreen src={iframe_src}></iframe>
-
     </div> 
     <Footer></Footer>
      </>
