@@ -25,8 +25,8 @@ const Service = () => {
   return (
     <>
     <Head>
-      <title>Empower Recovery</title>
-      <meta name="description" content="Empower Website" />
+      <title>Treatment | Empower Recovery Center</title>
+      <meta name="description" content="Expert Mental Health and Psychiatric Care in Arizona - We offer compassionate inpatient and outpatient services for addiction and mental health disorders." />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="icon" href="/favicon.ico" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
