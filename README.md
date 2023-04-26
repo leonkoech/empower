@@ -37,8 +37,8 @@ The design takes minimalistic, modern and professional visuals with use of two d
 - [x] Colors
   - [x] Primary `#63794B`
   - [x] Secondary `#FFE9C9`
-- [ ] Logo
-  - [ ] Illustrator file
+- [x] Logo
+  - [x] Illustrator file
   
 ### 2. Responsiveness Requirements
 
@@ -108,14 +108,14 @@ A simple google search would present the empower website if this is added, also 
 
 **_robots_**
 
-- [ ] Robots.txt
+- [x] Robots.txt
 
 **_meta_**
 
-- [ ] tags
-- [ ] title
-- [ ] description
-- [ ] sitemap
+- [x] tags
+- [x] title
+- [x] description
+- [x] sitemap
 
 ### 6. QA requirements
 
@@ -124,8 +124,8 @@ Quality assurance involves checking the website for;
  
 - [ ] Bugs + Features
 - [ ] Accessibility 
-- [ ] SEO
-- [ ] performance
+- [x] SEO
+- [x] performance
 
 ### 7. Hosting Requirements
 

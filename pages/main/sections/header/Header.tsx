@@ -86,11 +86,6 @@ const Header = ({selected_tab}:props) => {
                     }`}
                     
                     onClick={() => {
-                      // console.group(tab_heights)
-                      // window.scrollTo({
-                      //   top: (tab_heights as any)[tab].start,
-                      //   behavior: "smooth"
-                      // });
                       menu_listener(false);
                     }}
                   >
@@ -105,12 +100,15 @@ const Header = ({selected_tab}:props) => {
       <div className={styles.header_tablet}>
         {tabs.map((tab: string, index: number) => {
           if (index === 3) {
-            // TODO:
             return <Image
             key={index}
             src={logo}
-            alt="home"
+            alt="Empower Recovery Center"
+            aria-label="Empower Recovery Center"
             className={styles.header_logo}
+            onClick={() => {
+              router.push("/")
+            }}
           />
           
           // <p >LOGO</p>;
