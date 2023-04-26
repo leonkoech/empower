@@ -1,7 +1,6 @@
 import { italics } from "../models/italics";
 import { italic } from "./italics";
 import { services_data } from "./services";
-import { team_data } from "./team";
 
 export const service = {
   title: {
@@ -11,10 +10,3 @@ export const service = {
   list: services_data
 };
 
-export const team = {
-  title: {
-    text: `Our ${italic} includes`,
-    italics: ["team"]
-  } as italics,
-  list: team_data
-};
