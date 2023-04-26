@@ -24,12 +24,23 @@ const Enroll = () => {
       </Head>
       <Header  selected_tab="enroll"></Header>
       <div ref={ref} className={style.enroll_container}>
-      <div className={style.enroll_container_sub}>
-        <h2 role="term">
-          <Italicized word={enroll_data.title}></Italicized>
-        </h2>
-        <p role="description">{enroll_data.details}</p>
-      </div>
+        {
+          enroll_data.map((section: any, index: any)=>{
+            return(
+              <div key={index}  className={` ${
+                index % 2 == 0
+                  ? style.enroll_container_left
+                  : style.enroll_container_right
+              }`}>
+                <h2 role="term">
+                  <Italicized word={section.title}></Italicized>
+                </h2>
+                <p role="description">{section.details}</p>
+              </div>
+            )
+          })
+        }
+      
     </div>
     <Footer></Footer>
     </>

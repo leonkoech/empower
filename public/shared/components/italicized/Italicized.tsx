@@ -5,13 +5,14 @@ type props={
 }
 const Italicized = ({word}: props) => {
   let content = word.text.split(" ");
-  let italic_cpy = word.italics
+  let italic_list = word.italics
+  let count = -1
   return (
     <span>
       {content.map((val: string, index: number) => {
         if (val === italic) {
-          let test = italic_cpy[0]
-          return <i key={index}> {test} </i>;
+          count++
+          return <i key={index}> {italic_list[count]} </i>;
         } else {
           return ` ${val}`;
         }

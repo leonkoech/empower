@@ -1,14 +1,12 @@
 export const services_data: string[] = [
-  "group therapy",
-  "life and social skills training",
-  "Group Therapy",
-  "group therapy",
-  "life and social skills training",
-  "Group Therapy",
-  "group therapy",
-  "life and social skills training",
-  "Group Therapy",
-  "group therapy",
-  "life and social skills training",
-  "Group Therapy"
+  "Life and Social Skills Training",
+  "Peer Support",
+  "Case Management",
+  "Community Engagement",
+  "Group and Individual Therapy",
+  "Family Education/Counseling",
+  "Nutrition Education",
+  "Court Mandated Services",
+  "Housing Assistance",
+  "Transportation to and from program and appointments"
 ];
