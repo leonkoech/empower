@@ -9,7 +9,7 @@ const Footer = () => {
   });
   return (
     <div ref={ref} className={style.footer_container}>
-      <span>Empower</span>
+      <span>Empower Recovery Center</span>
       <span>2023 ©</span>
     </div>
   );

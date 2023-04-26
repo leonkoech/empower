@@ -86,6 +86,7 @@ const Header = ({selected_tab}:props) => {
                     }`}
                     
                     onClick={() => {
+                      tab == "home"?router.push("/"):router.push(tab)
                       menu_listener(false);
                     }}
                   >
