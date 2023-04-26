@@ -1,0 +1,49 @@
+[debug] [2023-04-26T02:36:24.966Z] ----------------------------------------------------------------------
+[debug] [2023-04-26T02:36:24.968Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2023-04-26T02:36:24.969Z] CLI Version:   11.16.0
+[debug] [2023-04-26T02:36:24.969Z] Platform:      win32
+[debug] [2023-04-26T02:36:24.969Z] Node Version:  v16.15.0
+[debug] [2023-04-26T02:36:24.973Z] Time:          Tue Apr 25 2023 22:36:24 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-04-26T02:36:24.974Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-26T02:36:24.987Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-04-26T02:36:25.086Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-26T02:36:25.087Z] > authorizing via signed-in user (leonkipkoech00@gmail.com)
+[debug] [2023-04-26T02:36:25.087Z] [iam] checking project empower-recovery for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-26T02:36:25.088Z] > refreshing access token with scopes: []
+[debug] [2023-04-26T02:36:25.089Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-04-26T02:36:25.089Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-04-26T02:36:26.002Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-04-26T02:36:26.003Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2023-04-26T02:36:26.022Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-04-26T02:36:26.022Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-04-26T02:36:26.032Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/empower-recovery:testIamPermissions [none]
+[debug] [2023-04-26T02:36:26.032Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/empower-recovery:testIamPermissions x-goog-quota-user=projects/empower-recovery
+[debug] [2023-04-26T02:36:26.032Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/empower-recovery:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-26T02:36:26.943Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/empower-recovery:testIamPermissions 200
+[debug] [2023-04-26T02:36:26.944Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/empower-recovery:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-26T02:36:26.945Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/empower-recovery [none]
+[debug] [2023-04-26T02:36:28.844Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/empower-recovery 200
+[debug] [2023-04-26T02:36:28.845Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/empower-recovery {"projectId":"empower-recovery","projectNumber":"812703933946","displayName":"Empower Recovery","name":"projects/empower-recovery","resources":{"hostingSite":"empower-recovery"},"state":"ACTIVE","etag":"1_6cdf2434-c4d3-4b1a-a562-5722f9e20599"}
+[debug] [2023-04-26T02:37:12.945Z] Error: EPERM: operation not permitted, open 'C:\Users\17866\Documents\Javascript Projects\Empower\empower\.next\trace'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-04-26T02:38:21.627Z] ----------------------------------------------------------------------
+[debug] [2023-04-26T02:38:21.629Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2023-04-26T02:38:21.629Z] CLI Version:   11.29.0
+[debug] [2023-04-26T02:38:21.629Z] Platform:      win32
+[debug] [2023-04-26T02:38:21.629Z] Node Version:  v16.15.0
+[debug] [2023-04-26T02:38:21.630Z] Time:          Tue Apr 25 2023 22:38:21 GMT-0400 (Eastern Daylight Time)
+[debug] [2023-04-26T02:38:21.630Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-04-26T02:38:21.721Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-04-26T02:38:21.721Z] > authorizing via signed-in user (leonkipkoech00@gmail.com)
+[debug] [2023-04-26T02:38:21.721Z] [iam] checking project empower-recovery for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2023-04-26T02:38:21.723Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/empower-recovery:testIamPermissions [none]
+[debug] [2023-04-26T02:38:21.723Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/empower-recovery:testIamPermissions x-goog-quota-user=projects/empower-recovery
+[debug] [2023-04-26T02:38:21.723Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/empower-recovery:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-26T02:38:22.243Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/empower-recovery:testIamPermissions 200
+[debug] [2023-04-26T02:38:22.243Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/empower-recovery:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2023-04-26T02:38:22.244Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/empower-recovery [none]
+[debug] [2023-04-26T02:38:22.724Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/empower-recovery 200
+[debug] [2023-04-26T02:38:22.724Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/empower-recovery {"projectId":"empower-recovery","projectNumber":"812703933946","displayName":"Empower Recovery","name":"projects/empower-recovery","resources":{"hostingSite":"empower-recovery"},"state":"ACTIVE","etag":"1_6cdf2434-c4d3-4b1a-a562-5722f9e20599"}
