@@ -12,6 +12,7 @@ specifiers:
   next: 13.0.7
   react: 18.2.0
   react-dom: 18.2.0
+  saas: ^1.0.0
   sass: ^1.57.1
   sharp: ^0.31.3
   typescript: 4.9.4
@@ -28,6 +29,7 @@ dependencies:
   next: 13.0.7_3duxcpitbtplz62feflag7fwby
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  saas: 1.0.0
   sass: 1.57.1
   sharp: 0.31.3
   typescript: 4.9.4
@@ -2055,6 +2057,10 @@ packages:
     resolution: {integrity: sha512-5l4VyZR86LZ/lDxZTR6jqL8AFE2S0IFLMP26AbjsLVADxHdhB/c0GUsH+y39UfCi3dzz8OlQuPmnaJOMoDHQBA==}
     dependencies:
       queue-microtask: 1.2.3
+    dev: false
+
+  /saas/1.0.0:
+    resolution: {integrity: sha512-FgayhFS18BlPfcyMcOqxD7PIyNyUjqyv8R+rsr3X2KRK2icEUL4uvWBF+lZ0IPqJIO2kUO0d20OXY+R+pdriqg==}
     dev: false
 
   /safe-buffer/5.2.1:
