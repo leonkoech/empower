@@ -2,7 +2,6 @@ import styles from "./Header.module.scss";
 import Image from "next/image";
 import { images } from "../../../../public/shared/modules/images";
 import React, { useState, useRef, useEffect } from "react";
-import { useRouter } from "next/router";
 import { animateScrollTo } from "../../../../public/shared/services/animate";
 
 const tabs = [
@@ -28,8 +27,6 @@ interface tabs {
 export var header_height = 0;
 
 const Header = ({section_heights, loader}:props) => {
-  const router = useRouter()
-
   const ref = useRef(null);
 
   const [open_state, menu_listener] = useState(false);
@@ -98,7 +95,15 @@ const Header = ({section_heights, loader}:props) => {
     <div ref={ref} className={styles.header_container}>
       <div className={styles.header_phone}>
         <div className={styles.header_phone_display}>
-          <h1>Empower.</h1>
+        <Image
+            key={"logo"}
+            src={images.wordLogo}
+            alt="Empower Recovery Center"
+            aria-label="Empower Recovery Center"
+            onClick={() => {
+              animateScrollTo(0,1000)
+            }}
+          />
           <button
             aria-label="open menu"
             type="button"
@@ -153,15 +158,10 @@ const Header = ({section_heights, loader}:props) => {
                     }`}
                     
                     onClick={() => {
-                      // tab == "home"?router.push("/"):router.push(tab)
-                      // window.scrollTo(selected_tab_height[tab])
-                      // console.log(selected_tab_height.[tab])
                       if (tab in selected_tab_height) {
                         const value = selected_tab_height[tab]["from"];
                         console.log(value)
                         animateScrollTo(value,1000)
-                        // window.scrollTo(0, value)
-                        // Scroll.an
                       }
                       menu_listener(false);
                     }}
