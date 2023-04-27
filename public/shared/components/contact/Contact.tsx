@@ -8,7 +8,16 @@ const Contact_Card = ({title,list}: contacts) => {
             <span>{title}</span>
             {
                 list.map((val:string, index: number) => {
-                    return (<p key={index}>{val}</p>)
+                    if(index === 4 && title == "general"){
+                        return (<a key={index} href={`mailto:${val}?subject=RE: Inquiries Empower Recovery Center Website`}>{val}</a>)
+                    }
+                    if(index === 5 && title == "general"){
+                        return (<a key={index} href={`https://${val}`}>{val}</a>)
+                    }
+                    else{
+                        return (<p key={index}>{val}</p>)
+                    }
+                    
                 })
             }
         </div>

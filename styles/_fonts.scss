@@ -26,7 +26,25 @@
       }
     }
   }
+  h3 {
+    @include body-med-bold();
+    color: $color;
+    font-weight: normal;
+    span {
+      @include body-med-bold();
+      color: $color;
+      
+      i {
+        font-family: $font-italic;
+      }
+    }
+  }
   p {
+    @include body-regular();
+    color: $color;
+    font-family: $font-body;
+  }
+  a{
     @include body-regular();
     color: $color;
     font-family: $font-body;
@@ -34,7 +52,6 @@
   span {
     @include body-small();
     color: $color;
-    
     font-family: $font-body;
   }
 }

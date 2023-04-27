@@ -4,9 +4,10 @@ export const services_data: string[] = [
   "Case Management",
   "Community Engagement",
   "Group and Individual Therapy",
-  "Family Education/Counseling",
+  "Family Education",
+  "Family Counseling",
   "Nutrition Education",
   "Court Mandated Services",
   "Housing Assistance",
-  "Transportation to and from program and appointments"
+  "Transportation for appointments"
 ];

@@ -1,0 +1,36 @@
+@import "../../../../styles/theme";
+@import "../../../../styles/variables";
+@import "../../../../styles/screens";
+.container {
+  @include theme($pri);
+
+  width: 100%;
+  padding: 5% $padding-side-page;
+  &__title{
+    margin: 5% 0;
+    @include tablet-down{
+        margin: 15% 0;
+    }
+  }
+  &__cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    row-gap: 5vh;
+    column-gap: 3%;
+    padding: 5% 0;
+    @include tablet-down {
+      grid-template-columns: 45% 45%;
+      column-gap: 10%;
+    }
+    div{
+      @include theme($sec_52)
+    }
+  }
+  div{
+                
+    h2{
+        text-align: center;
+    }
+}
+}

@@ -1,7 +1,7 @@
 import style from "./Home.module.scss";
 import image from "../../../../public/assets/images/image.jpg";
 import arrow_down from "../../../../public/assets/icons/arrow.svg";
-import { landing } from "../../../../public/shared/modules/landing";
+import { landing, quoted } from "../../../../public/shared/modules/landing";
 import Italicized from "../../../../public/shared/components/italicized/Italicized";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
@@ -11,10 +11,10 @@ export var home_height=0;
 const HomeSection = ({sendHeight}:any) => {
 
   const ref = useRef(null)
-  // useEffect(()=>{
-  //   home_height = (ref.current as any).offsetHeight;
-  //   sendHeight((ref.current as any).offsetHeight);
-  // })
+  useEffect(()=>{
+    home_height = (ref.current as any).offsetHeight;
+    sendHeight(home_height);
+  })
   return (
     <div ref={ref} className={style.home_container}>
       <div className={style.home_description}>
@@ -22,7 +22,14 @@ const HomeSection = ({sendHeight}:any) => {
           <h1>
             <Italicized word={landing}></Italicized>
           </h1>
+          <br></br>
+          <h3>
+            <Italicized word={quoted}></Italicized>
+          </h3>
         </div>
+        {/* <div className={style.home_description_text}>
+          
+        </div> */}
         {/* <div className={style.home_description_arrow}>
           <Image
             src={arrow_down}

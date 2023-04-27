@@ -1,0 +1,54 @@
+@import '../../../../styles/theme';
+@import '../../../../styles/variables';
+@import '../../../../styles/screens';
+
+.container{
+    @include theme($pri);
+
+    width: 100%;
+    padding: 5% $padding-side-page;
+    &_text{
+        width: inherit;
+        margin: 5% 0;
+
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+        @include tablet-up{
+            // max-height: 45vh;
+            div{
+                width: 48%;
+            }
+        }
+        @include tablet-down{
+            div{
+                text-align: justify;
+                h2{
+                    text-align: center;
+                }
+            }
+        }
+        &_left{
+            text-align: left;
+            flex-direction: row;
+            @include tablet-down{
+                flex-direction: column-reverse;
+            }
+        }
+        &_right{
+            text-align: right;
+            
+            display: flex;
+            justify-content: flex-end;
+            flex-direction: row-reverse;
+
+            @include tablet-down{
+                flex-direction: column-reverse;
+            }
+        }
+        &_shape{
+            text-align: center;
+        }
+    }
+}
