@@ -17,3 +17,8 @@ export const contact_title: italics = {
   text: `${italic} to us`,
   italics: ["Reach Out"]
 };
+
+export const map_title: italics = {
+  text: `Our ${italic}`,
+  italics: ["Office Location "]
+};

@@ -1,12 +1,9 @@
 import styles from "./Header.module.scss";
 import Image from "next/image";
-import menu from "../../../../public/assets/icons/menu.svg";
-import logo from "../../../../public/assets/images/logo.png";
-import close from "../../../../public/assets/icons/close.svg";
+import { images } from "../../../../public/shared/modules/images";
 import React, { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/router";
-import { resolve } from "path";
-
+import { animateScrollTo } from "../../../../public/shared/services/animate";
 
 const tabs = [
   "home",
@@ -36,6 +33,7 @@ const Header = ({section_heights, loader}:props) => {
   const ref = useRef(null);
 
   const [open_state, menu_listener] = useState(false);
+  const [focused_tab, focus_listener ] = useState('')
   const [load_data, load_listener] = useState(false);
   const [selected_tab_height, select_tab] = useState({
     "home":{"from": 0, "to": 0},
@@ -49,6 +47,12 @@ const Header = ({section_heights, loader}:props) => {
  
   useEffect(()=>{
     let head_height = 0
+    if (typeof window !== 'undefined') {
+    window.scrollTo(0,0)
+    focus_listener("home")
+    console.log(focused_tab)
+    }
+  
     if(loader){
       if(!load_data){
         const new_values = {
@@ -61,36 +65,35 @@ const Header = ({section_heights, loader}:props) => {
         }
         select_tab(new_values)
         load_listener(true)
+        handleScroll(selected_tab_height)
       }   
     }
-    console.log(selected_tab_height)
   },[loader,selected_tab_height])
 
-  function animateScrollTo(targetPosition: number, duration: number): void {
-    const startPosition = window.pageYOffset;
-    const distance = targetPosition - startPosition;
-    const startTime = performance.now();
   
-    function ease(t: number): number {
-      // Easing function, e.g. easeInOutCubic
-      return t < 0.5
-        ? 4 * t * t * t
-        : (t - 1) * (2 * t - 2) * (2 * t - 2) + 1;
+  function handleScroll(selected_tab_height: tabs) {
+    if(loader){
+      for(let [tab_name, tab_size] of Object.entries(selected_tab_height)){
+        if (typeof window !== 'undefined') {
+          let current_location = window.scrollY
+          if(current_location>=tab_size.from && current_location<=tab_size.to ){
+            // console.log(current_location)
+            focus_listener(tab_name)
+          }
+        }}
     }
-  
-    function step(currentTime: number): void {
-      const timeElapsed = currentTime - startTime;
-      const progress = Math.min(timeElapsed / duration, 1);
-      const easedProgress = ease(progress);
-      const newPosition = startPosition + distance * easedProgress;
-      window.scrollTo(0, newPosition);
-      if (timeElapsed < duration) {
-        requestAnimationFrame(step);
-      }
-    }
-  
-    requestAnimationFrame(step);
+
   }
+
+  useEffect(() => {
+    
+    window.addEventListener('scroll', ()=>handleScroll(selected_tab_height));
+
+    // Remove event listener on unmount
+    return () => {
+      window.removeEventListener('scroll', ()=>handleScroll(selected_tab_height));
+    };
+  }, [focused_tab])
   return (
     <div ref={ref} className={styles.header_container}>
       <div className={styles.header_phone}>
@@ -104,7 +107,7 @@ const Header = ({section_heights, loader}:props) => {
             }}
           >
             <Image
-              src={menu}
+              src={images.menu}
               alt="open menu"
               className={styles.header_menu_icon}
             />
@@ -127,7 +130,7 @@ const Header = ({section_heights, loader}:props) => {
               }}
             >
               <Image
-                src={close}
+                src={images.close}
                 alt="close menu"
                 className={styles.header_menu_icon}
               />
@@ -145,9 +148,9 @@ const Header = ({section_heights, loader}:props) => {
                     type="button"
                     aria-pressed="false"
                     key={index}
-                    // className={`${styles.header_buttons} ${
-                    //   selected_tab == tab ? styles.header_buttons_active : ""
-                    // }`}
+                    className={`${styles.header_buttons} ${
+                      focused_tab == tab ? styles.header_buttons_active : ""
+                    }`}
                     
                     onClick={() => {
                       // tab == "home"?router.push("/"):router.push(tab)
@@ -176,7 +179,7 @@ const Header = ({section_heights, loader}:props) => {
           if (index === 3) {
             return <Image
             key={index}
-            src={logo}
+            src={images.logo}
             alt="Empower Recovery Center"
             aria-label="Empower Recovery Center"
             className={styles.header_logo}
@@ -184,8 +187,6 @@ const Header = ({section_heights, loader}:props) => {
               animateScrollTo(0,1000)
             }}
           />
-          
-          // <p >LOGO</p>;
           } else {
             return (
               <button
@@ -193,9 +194,9 @@ const Header = ({section_heights, loader}:props) => {
                 aria-label={tab}
                 type="button"
                 key={index}
-                // className={`${styles.header_buttons} ${
-                //   selected_tab == tab ? styles.header_buttons_active : ""
-                // }`}
+                className={`${styles.header_buttons} ${
+                  focused_tab == tab ? styles.header_buttons_active : ""
+                }`}
                 onClick={() => {
                   if (tab in selected_tab_height) {
                     const value = selected_tab_height[tab]["from"];

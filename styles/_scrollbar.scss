@@ -1,0 +1,25 @@
+@import './variables';
+/* width */
+
+@mixin scrollbar(){
+    ::-webkit-scrollbar {
+        width: 9px;
+        
+      }
+      
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: $primary;
+      }
+      
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: $tertiary;
+        border-radius: 9px;
+      }
+      
+      /* Handle on hover */
+    //   ::-webkit-scrollbar-thumb:hover {
+    //    cursor: pointer;
+    //   }
+}

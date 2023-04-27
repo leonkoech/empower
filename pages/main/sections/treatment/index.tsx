@@ -1,12 +1,8 @@
-import style from "./Service_teams.module.scss";
+import style from "./Treatment.module.scss";
 import Italicized from "../../../../public/shared/components/italicized/Italicized";
 import { treatment } from "../../../../public/shared/modules/treatment_cont";
 import Card from "../../../../public/shared/components/card/Card";
 import { useRef, useEffect } from "react";
-import Head from "next/head";
-import Header from "../../../main/sections/header/Header";
-import Footer from "../../../main/sections/footer/Footer";
-// import { treatment_data } from "../../public/shared/modules/treatment";
 
 export var service_height = 0;
 export var team_height = 0;
@@ -19,8 +15,6 @@ const Service = ({sendHeight}:any) => {
   })
   return (
     <div  ref={ref}  className={style.container}>
-      {/* {treatment.map((section: any, index: number) => {
-        return ( */}
           <div   >
             <h2 className={style.container__title}>
               <Italicized word={treatment.title}></Italicized>
@@ -31,8 +25,6 @@ const Service = ({sendHeight}:any) => {
               })}
             </div>
           </div>
-        {/* );
-      })} */}
     </div>
   );
 };

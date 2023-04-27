@@ -1,4 +1,4 @@
-
+@import './scrollbar';
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,6 +11,7 @@ body {
   overflow-x: hidden;
   // font-family: 'Bodoni Moda', serif;
 }
+@include scrollbar();
 // h1{
 //   span{
 //      @include headline-bold();

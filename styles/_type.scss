@@ -54,6 +54,15 @@ $text-fluidity-end: 2500px;
   word-spacing: 0.4px;
 }
 
+@mixin body-med-bold() {
+  @include text-size(22px, 34px);
+  font-family:  $font;
+  font-feature-settings: 'ss02';
+  letter-spacing: 0.1px;
+  line-height: 1.5;
+  word-spacing: 0.4px;
+}
+
 @mixin body-regular() {
   @include text-size(12px, 16px);
   font-family: $font;

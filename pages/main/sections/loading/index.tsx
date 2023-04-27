@@ -1,6 +1,5 @@
-import { useEffect, useRef } from "react";
 import style from "./Loading.module.scss";
-import logo from "../../../../public/assets/images/logo.png"; 
+import { images } from "../../../../public/shared/modules/images";
 import Image from "next/image";
 
 const Loader = ({loaded}:any) => {
@@ -8,7 +7,7 @@ const Loader = ({loaded}:any) => {
   return (
     <div className={`${(!loaded)?style.loader_container:style.loader_hidden}`}>
        <Image
-              src={logo}
+              src={images.logo}
               alt="loading"
               className={style.image}
             />

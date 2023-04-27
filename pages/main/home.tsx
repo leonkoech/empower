@@ -34,7 +34,6 @@ export default function Main() {
       <Treatment sendHeight={getTreatmentHeight}></Treatment>
       <Enroll sendHeight={getEnrollHeight}></Enroll>
       <Contact sendHeight={getContactHeight}></Contact>
-      <Footer></Footer>
     </main>
   );
 }
