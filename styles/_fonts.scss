@@ -34,7 +34,6 @@
   span {
     @include body-small();
     color: $color;
-    
     font-family: $font-body;
   }
 }

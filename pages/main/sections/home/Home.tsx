@@ -11,10 +11,10 @@ export var home_height=0;
 const HomeSection = ({sendHeight}:any) => {
 
   const ref = useRef(null)
-  // useEffect(()=>{
-  //   home_height = (ref.current as any).offsetHeight;
-  //   sendHeight((ref.current as any).offsetHeight);
-  // })
+  useEffect(()=>{
+    home_height = (ref.current as any).offsetHeight;
+    sendHeight(home_height);
+  })
   return (
     <div ref={ref} className={style.home_container}>
       <div className={style.home_description}>
