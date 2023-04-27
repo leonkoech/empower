@@ -44,6 +44,11 @@
     color: $color;
     font-family: $font-body;
   }
+  a{
+    @include body-regular();
+    color: $color;
+    font-family: $font-body;
+  }
   span {
     @include body-small();
     color: $color;

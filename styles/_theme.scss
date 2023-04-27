@@ -14,6 +14,10 @@
       background-color: $primary_12;
       @include fonts($primary)
     }
+    @if $type == $sec_52{
+      background-color: $secondary-light;
+      @include fonts($secondary-dark)
+    }
     @if $type == $ter{
       background-color: $tertiary;
       @include fonts($primary)

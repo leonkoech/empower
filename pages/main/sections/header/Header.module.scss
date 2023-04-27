@@ -13,12 +13,11 @@
             display: none;
         }
         
-        height: 100vh;
         width: 100vw;
        &_display{
         @include theme($pri);
-        height: 10%;
-        padding: 0 $padding-side-page;
+        height: 10vh;
+        padding: 3% $padding-side-page;
 
         display: flex;
         justify-content: space-between;

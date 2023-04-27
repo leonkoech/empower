@@ -14,9 +14,19 @@
         &_left{
             
             text-align: left;
+            
         }
         &_right{
             text-align: right;
+
+        }
+        @include tablet-down{
+            div{
+                text-align: justify;
+                h2{
+                    text-align: center;
+                }
+            }
         }
     }
 }

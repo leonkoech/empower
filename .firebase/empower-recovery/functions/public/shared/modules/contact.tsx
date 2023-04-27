@@ -5,7 +5,7 @@ import { italic } from "./italics";
 export const contact_data: contacts[] = [
   {
     title: "general",
-    list: ["Office (602) 675-4791","After Hours - (602) 284-7422", "4857 W Van Buren St, Suite 250", "Phoenix, Arizona 85043", "info@empowerre.com", "www.empowerre.com"]
+    list: ["Office (602) 675-4791","After Hours (602) 284-7422", "4857 W Van Buren St, Suite 250", "Phoenix, Arizona 85043", "info@empowerrc.com", "www.empowerrc.com"]
   },
   {
     title: "hours",

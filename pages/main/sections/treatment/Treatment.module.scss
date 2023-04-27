@@ -23,5 +23,14 @@
       grid-template-columns: 45% 45%;
       column-gap: 10%;
     }
+    div{
+      @include theme($sec_52)
+    }
   }
+  div{
+                
+    h2{
+        text-align: center;
+    }
+}
 }

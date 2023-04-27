@@ -2,10 +2,8 @@
 @import "../../../../styles/theme";
 .card{
     &_container{
-        @include theme($pri_12);
-
         width: 100%;
-        height: 10vh;
+        height: 12vh;
         // background-color: $primary_12;
         display: flex;
         justify-content: center;

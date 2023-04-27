@@ -17,7 +17,7 @@ const Service = ({sendHeight}:any) => {
             </h2>
             <div className={style.container__cards}>
               {service.list.map((v: string, index: number) => {
-                return <Card title={v} key={index}></Card>;
+                return <Card  title={v} key={index}></Card>;
               })}
             </div>
           </div>

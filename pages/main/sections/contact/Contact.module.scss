@@ -48,7 +48,12 @@
        
 
         @include tablet-down {
-
+            div{
+                
+                h2{
+                    text-align: center;
+                }
+            }
             // margin-top: 20%;
             &_bottom {
                 flex-direction: column;
