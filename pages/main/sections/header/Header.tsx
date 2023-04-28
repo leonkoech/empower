@@ -143,7 +143,7 @@ const Header = ({section_heights, loader}:props) => {
           </div>
           <div className={styles.header_phone_expanded_tabs}>
             {tabs.map((tab: any, index: number) => {
-              if (index !== 3) {
+              if (index !== Math.floor(tabs.length/2)) {
                 // if (window.scrollY > (tab_heights as any)[tab]) {
                 // }
                 return (
@@ -176,7 +176,7 @@ const Header = ({section_heights, loader}:props) => {
       </div>
       <div className={styles.header_tablet}>
         {tabs.map((tab: string, index: number) => {
-          if (index === 3) {
+          if (index === Math.floor(tabs.length/2)) {
             return <Image
             key={index}
             src={images.logo}
