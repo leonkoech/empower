@@ -1,16 +1,13 @@
-import style from "./Service_teams.module.scss";
+import style from "../treatment/Treatment.module.scss";
 import Italicized from "../../../../public/shared/components/italicized/Italicized";
 import { service } from "../../../../public/shared/modules/service_cont";
 import Card from "../../../../public/shared/components/card/Card";
-import { useEffect, useRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 
-const Service = ({sendHeight}:any) => {
-  const ref = useRef(null)
-  useEffect(()=>{
-    sendHeight((ref.current as any).offsetHeight);
-  })
+const Service = forwardRef(function Service({}:any, ref:any) {
+  
   return (
-    <div  ref={ref}  className={style.container}>
+    <div ref={ref} className={style.container}>
           <div >
             <h2 className={style.container__title}>
               <Italicized word={service.title}></Italicized>
@@ -23,6 +20,6 @@ const Service = ({sendHeight}:any) => {
           </div>
     </div>
   );
-};
+});
 
 export default Service;

@@ -10,8 +10,8 @@ const Coa = () => {
           src={coa.icon}
           className={style.container__icon__implicit}
           alt={coa.description}
-          width={500}
-          height={500}
+          width={0}
+          height={0}
           aria-label={coa.description}
         />
       </div>

@@ -19,6 +19,7 @@
             // max-height: 45vh;
             div{
                 width: 48%;
+                
             }
         }
         @include tablet-down{
@@ -30,13 +31,16 @@
             }
         }
         &_left{
+            height: 65vh;
             text-align: left;
             flex-direction: row;
             @include tablet-down{
                 flex-direction: column-reverse;
+                height: auto;
             }
         }
         &_right{
+            height: 65vh;
             text-align: right;
             
             display: flex;
@@ -45,6 +49,7 @@
 
             @include tablet-down{
                 flex-direction: column-reverse;
+                height: auto;
             }
         }
         &_shape{

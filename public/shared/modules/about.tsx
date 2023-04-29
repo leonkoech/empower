@@ -1,5 +1,6 @@
 import { italic } from "./italics";
 import { about } from "../models/about";
+import { images } from "./images";
 
 export const about_text =
   "Empower Recovery Center LLC is an outpatient treatment program that services adults struggling with addiction and mental health disorders. We deliver quality, professional treatment services by helping our clients break the power of chemical dependency into leading healthy lives free from alcohol and drugs.\
@@ -17,7 +18,8 @@ export const about_data: about[] = [
       italics: ["Empower"],
       bold: []
     },
-    details: about_text
+    details: about_text,
+    image: images.butterfly.src
   },
   {
     title: {
@@ -25,6 +27,7 @@ export const about_data: about[] = [
       italics: ["Commitment"],
       bold:[]
     },
-    details: Commitment_text
+    details: Commitment_text,
+    image: images.hand_holding.src
   },
 ];

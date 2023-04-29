@@ -26,19 +26,23 @@
         padding: 0 6%;
         &__implicit{
             height: auto;
-            width: 80px;
+            filter: invert(1);
+            width: 40px;
+            aspect-ratio: 1/1;
         }
     }
     &__text{
         @include center;
         
-        justify-content: start;
+        justify-content: flex-start;
         text-align: left;
+        width: 65%;
         @include tablet-down{
             justify-content: center;
             text-align: center;
+            width: 100%;
         }
-        width: 65%;
+       
         
         div{
             p, h3{

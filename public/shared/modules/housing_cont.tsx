@@ -6,7 +6,7 @@ import { housing, housing_details } from "./housing";
 export const housing_tab = {
     title: {
       text: `${italic} `,
-      italics: ["housing"]
+      italics: ["Housing"]
     } as italics,
     list: housing,
     details:  housing_details

@@ -39,7 +39,7 @@ export const contact_card = {
   } as italics,
   cards: [
       {
-          image: images.logo.src,
+          image: images.hand_stop.src,
           text: {
               text: "No Obligation to Enter Treatment",
               italics: [],
@@ -47,7 +47,7 @@ export const contact_card = {
           } as italics
       },
       {
-          image: images.logo.src,
+          image: images.clipboard.src,
           text: {
               text: "Free Confidential Assessment",
               italics: [],
@@ -55,7 +55,7 @@ export const contact_card = {
           } as italics
       },
       {
-          image: images.logo.src,
+          image: images.headphones.src,
           text: {
               text: "Caring Admissions Counselors",
               italics: [],
@@ -69,6 +69,6 @@ export const contact_card = {
 
 export const coa = {
   description: "24/7 free admissions call",
-  icon:  images.logo.src,
+  icon:  images.phone.src,
   title: after_hours
 }
