@@ -7,24 +7,29 @@
     height: 80vh;
     width: 100%;
     display: grid;
-    grid-template-columns: 70% 30%;
-    padding: 5% $padding-side-page;
+    // grid-template-columns: 70% 30%;
+    // padding: 5% $padding-side-page;
     align-items: center;
     margin-top: 10vh;
     @include theme($sec);
     @include tablet-down{
       display: flex;
       flex-direction: column-reverse;
+      height: auto;
     }
   }
   &_description {
-    height: 100%;
+    height: inherit;
     display: flex;
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
+    position: absolute;
+    background-color: $secondary-moderate;
     @include tablet-down{
-      height:50vh;
+      aspect-ratio: 3/4;
+      padding: 0 $padding-side-page;
+      justify-content: center;
     }
     &_text {
       text-align: center;
@@ -42,12 +47,11 @@
   }
   &_image {
     height: 100%;
+    width: 100%;
     background-color: #63794b;
-    border-radius: 24vw 24vw 0px 0px;
+    // border-radius: 24vw 24vw 0px 0px;
     @include tablet-down{
-      height: 40vh;
       aspect-ratio: 3/4;
-      border-radius: 24vh 24vh 0px 0px;
     }
   }
 }

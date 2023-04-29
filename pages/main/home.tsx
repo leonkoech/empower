@@ -2,38 +2,47 @@
 import Header from "./sections/header/Header";
 import HomeSection,{home_height} from "./sections/home/Home";
 import Footer from "./sections/footer/Footer";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import About from "./sections/about";
 import Service from "./sections/services";
 import Treatment from "./sections/treatment";
-import Enroll from "./sections/enroll";
 import Contact from "./sections/contact";
 import Loader from "./sections/loading";
+import Housing from "./sections/housing";
+import Insurance from "./sections/insurance/insurance";
+import Admissions from "./sections/admissions";
 
 export default function Main() {
-  const [home_height, getHomeHeight] = useState<Promise<Number>>();
-  const [about_height, getAboutHeight] = useState<Promise<Number>>();
-  const [contact_height, getContactHeight] = useState<Promise<Number>>();
-  const [treatment_height, getTreatmentHeight] = useState<Promise<Number>>();
-  const [services_height, getServicesHeight] = useState<Promise<Number>>();
-  const [enroll_height, getEnrollHeight] = useState<Promise<Number>>();
+  const homeRef = useRef(null);
+  const aboutRef = useRef(null);
+  const serviceRef = useRef(null);
+  const treatmentRef = useRef(null);
+  const housingRef = useRef(null);
+  const insuranceRef = useRef(null);
+  const admissionsRef = useRef(null);
+  const contactRef = useRef(null);
   const [loaded, elementLoaded] = useState(false);
   useEffect(()=>{
-    if((!loaded)&&home_height && about_height  &&  contact_height  &&  treatment_height  &&  services_height  && enroll_height){
+    if((!loaded)&&homeRef && aboutRef  &&  serviceRef  &&  treatmentRef  &&  housingRef  && insuranceRef && admissionsRef && contactRef){
       elementLoaded(true)
     }
   })
 
   return (
     <main>
-      <Header section_heights={[home_height,about_height,services_height,treatment_height,enroll_height,contact_height]} loader={loaded}></Header>
+      <Header 
+      tab_refs={{"home":homeRef,"about":aboutRef,"services":serviceRef,"treatment":treatmentRef,"housing":housingRef,"insurance":insuranceRef,"admissions":admissionsRef,"contact":contactRef, 'logourl':undefined}} 
+      loader={loaded}
+      ></Header>
       <Loader loaded = {loaded}></Loader>
-      <HomeSection sendHeight={getHomeHeight}></HomeSection>
-      <About sendHeight={getAboutHeight}></About>
-      <Service sendHeight={getServicesHeight}></Service>
-      <Treatment sendHeight={getTreatmentHeight}></Treatment>
-      <Enroll sendHeight={getEnrollHeight}></Enroll>
-      <Contact sendHeight={getContactHeight}></Contact>
+      <HomeSection  ref={homeRef}></HomeSection>
+      <About  ref={aboutRef}></About>
+      <Service ref={serviceRef}></Service>
+      <Treatment  ref={treatmentRef}></Treatment>
+      <Housing ref={housingRef}></Housing>
+      <Insurance ref={insuranceRef}></Insurance>
+      <Admissions ref={admissionsRef}></Admissions>
+      <Contact  ref={contactRef}></Contact>
     </main>
   );
 }

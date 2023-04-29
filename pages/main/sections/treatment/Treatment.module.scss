@@ -1,17 +1,21 @@
 @import "../../../../styles/theme";
 @import "../../../../styles/variables";
 @import "../../../../styles/screens";
+
 .container {
   @include theme($pri);
 
   width: 100%;
-  padding: 5% $padding-side-page;
-  &__title{
+  padding: 8% $padding-side-page 12% $padding-side-page;
+  
+  &__title {
     margin: 5% 0;
-    @include tablet-down{
-        margin: 15% 0;
+
+    @include tablet-down {
+      margin: 15% 0;
     }
   }
+
   &__cards {
     width: 100%;
     display: grid;
@@ -19,18 +23,89 @@
     row-gap: 5vh;
     column-gap: 3%;
     padding: 5% 0;
+
     @include tablet-down {
-      grid-template-columns: 45% 45%;
+      grid-template-columns: auto;
       column-gap: 10%;
     }
-    div{
-      @include theme($sec_52)
+
+    div {
+      @include theme($sec_52);
+
     }
   }
-  div{
-                
-    h2{
-        text-align: center;
+
+  // div {
+  //   @include tablet-down {
+
+  //     text-align: justify;
+  //   }
+
+  //   h2 {
+  //     @include tablet-down {
+
+  //       text-align: center;
+  //     }
+
+  //   }
+
+  //   div {
+
+  //     @include tablet-down {
+  //       text-align: center;
+  //     }
+  //   }
+  // }
+
+  &__text {
+      &__justified{
+        @include tablet-down {
+          text-align: justify;
+        }
+      }
+      &__centered{
+        @include tablet-down {
+          text-align: center;
+        }
+      }    
+  }
+
+  &__coa {
+    @include center;
+
+    @include tablet-up {
+      padding: 6% 0;
     }
-}
+  }
+
+  &__row {
+    @include tablet-up {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__inner {
+    margin: 5% 0 0;
+    padding: 5% $padding-side-page 0;
+
+    h2 {
+      text-align: center;
+    }
+  }
+  &__theme{
+    &__secondary{
+      @include theme($sec);
+      &__cards{
+        div {
+          @include theme($pri_12);
+        }
+      }
+    }
+  }
+  &__three{
+    height: 70vh;
+    @include center;
+  }
 }

@@ -8,13 +8,41 @@ const tabs = [
   "home",
   "about",
   "services",
-  "logourl",
   "treatment",
-  "enroll",
+  "logourl",
+  "housing",
+  "insurance",
+  "admissions",
   "contact"
 ];
+
+interface TabRefs {
+  home: any;
+  about: any;
+  services: any;
+  treatment: any;
+  logourl: any;
+  housing: any;
+  insurance: any;
+  admissions: any;
+  contact: any;
+}
+
+const tab_refs: any = {
+  home: undefined,
+  about: undefined,
+  services: undefined,
+  treatment: undefined,
+  logourl: undefined,
+  housing: undefined,
+  insurance: undefined,
+  admissions: undefined,
+  contact: undefined,
+};
+
 type props = {
-  section_heights: any[],
+  tab_refs: any,
+  // section_heights: any[],
   loader: any
 }
 interface tab_values {
@@ -26,71 +54,71 @@ interface tabs {
 }
 export var header_height = 0;
 
-const Header = ({section_heights, loader}:props) => {
+const Header = ({tab_refs, loader}:props) => {
   const ref = useRef(null);
 
   const [open_state, menu_listener] = useState(false);
   const [focused_tab, focus_listener ] = useState('')
-  const [load_data, load_listener] = useState(false);
-  const [selected_tab_height, select_tab] = useState({
-    "home":{"from": 0, "to": 0},
-  "about": {"from": 0, "to": 0},
-  "services":{"from": 0, "to": 0},
-  "treatment":{"from": 0, "to": 0},
-  "enroll": {"from": 0, "to": 0},
-  "contact": {"from": 0, "to": 0},
-} as tabs)
+  const scrollToRef = (myRef:any) => {
+    myRef.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" })
+  };
+
+ useEffect(()=>{
+  if(loader){
+    console.log(tab_refs)
+  }
+ })
 
  
-  useEffect(()=>{
-    let head_height = 0
-    if (typeof window !== 'undefined') {
-    window.scrollTo(0,0)
-    focus_listener("home")
-    console.log(focused_tab)
-    }
+  // useEffect(()=>{
+  //   let head_height = 0
+  //   if (typeof window !== 'undefined') {
+  //   window.scrollTo(0,0)
+  //   focus_listener("home")
+  //   console.log(focused_tab)
+  //   }
   
-    if(loader){
-      if(!load_data){
-        const new_values = {
-        "home": {"from": head_height , "to": head_height+section_heights[0]},
-        "about": {"from": head_height+section_heights[0], "to": head_height+section_heights[0]+section_heights[1]}, 
-        "services": {"from": head_height+section_heights[0]+section_heights[1], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]},
-        "treatment": {"from": head_height+section_heights[0]+section_heights[1]+section_heights[2], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]},
-        "enroll": {"from": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]+section_heights[4]},
-        "contact": {"from": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]+section_heights[4], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]+section_heights[4]+section_heights[5]},
-        }
-        select_tab(new_values)
-        load_listener(true)
-        handleScroll(selected_tab_height)
-      }   
-    }
-  },[loader,selected_tab_height])
+  //   if(loader){
+  //     if(!load_data){
+  //       const new_values = {
+  //       "home": {"from": head_height , "to": head_height+section_heights[0]},
+  //       "about": {"from": head_height+section_heights[0], "to": head_height+section_heights[0]+section_heights[1]}, 
+  //       "services": {"from": head_height+section_heights[0]+section_heights[1], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]},
+  //       "treatment": {"from": head_height+section_heights[0]+section_heights[1]+section_heights[2], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]},
+  //       "admissions": {"from": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]+section_heights[4]},
+  //       "contact": {"from": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]+section_heights[4], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]+section_heights[4]+section_heights[5]},
+  //       }
+  //       select_tab(new_values)
+  //       load_listener(true)
+  //       handleScroll(selected_tab_height)
+  //     }   
+  //   }
+  // },[loader,selected_tab_height])
 
   
-  function handleScroll(selected_tab_height: tabs) {
-    if(loader){
-      for(let [tab_name, tab_size] of Object.entries(selected_tab_height)){
-        if (typeof window !== 'undefined') {
-          let current_location = window.scrollY
-          if(current_location>=tab_size.from && current_location<=tab_size.to ){
-            // console.log(current_location)
-            focus_listener(tab_name)
-          }
-        }}
-    }
+  // function handleScroll(selected_tab_height: tabs) {
+  //   if(loader){
+  //     for(let [tab_name, tab_size] of Object.entries(selected_tab_height)){
+  //       if (typeof window !== 'undefined') {
+  //         let current_location = window.scrollY
+  //         if(current_location>=tab_size.from && current_location<=tab_size.to ){
+  //           // console.log(current_location)
+  //           focus_listener(tab_name)
+  //         }
+  //       }}
+  //   }
 
-  }
+  // }
 
-  useEffect(() => {
+  // useEffect(() => {
     
-    window.addEventListener('scroll', ()=>handleScroll(selected_tab_height));
+  //   window.addEventListener('scroll', ()=>handleScroll(selected_tab_height));
 
-    // Remove event listener on unmount
-    return () => {
-      window.removeEventListener('scroll', ()=>handleScroll(selected_tab_height));
-    };
-  }, [focused_tab])
+  //   // Remove event listener on unmount
+  //   return () => {
+  //     window.removeEventListener('scroll', ()=>handleScroll(selected_tab_height));
+  //   };
+  // }, [focused_tab])
   return (
     <div ref={ref} className={styles.header_container}>
       <div className={styles.header_phone}>
@@ -101,7 +129,7 @@ const Header = ({section_heights, loader}:props) => {
             alt="Empower Recovery Center"
             aria-label="Empower Recovery Center"
             onClick={() => {
-              animateScrollTo(0,1000)
+              scrollToRef(tab_refs["home"])
             }}
           />
           <button
@@ -143,9 +171,7 @@ const Header = ({section_heights, loader}:props) => {
           </div>
           <div className={styles.header_phone_expanded_tabs}>
             {tabs.map((tab: any, index: number) => {
-              if (index !== 3) {
-                // if (window.scrollY > (tab_heights as any)[tab]) {
-                // }
+              if (index !== Math.floor(tabs.length/2)) {
                 return (
                   <button
                     tabIndex={-1}
@@ -158,11 +184,7 @@ const Header = ({section_heights, loader}:props) => {
                     }`}
                     
                     onClick={() => {
-                      if (tab in selected_tab_height) {
-                        const value = selected_tab_height[tab]["from"];
-                        console.log(value)
-                        animateScrollTo(value,1000)
-                      }
+                      scrollToRef(tab_refs[tab])
                       menu_listener(false);
                     }}
                   >
@@ -176,7 +198,7 @@ const Header = ({section_heights, loader}:props) => {
       </div>
       <div className={styles.header_tablet}>
         {tabs.map((tab: string, index: number) => {
-          if (index === 3) {
+          if (index === Math.floor(tabs.length/2)) {
             return <Image
             key={index}
             src={images.logo}
@@ -198,14 +220,7 @@ const Header = ({section_heights, loader}:props) => {
                   focused_tab == tab ? styles.header_buttons_active : ""
                 }`}
                 onClick={() => {
-                  if (tab in selected_tab_height) {
-                    const value = selected_tab_height[tab]["from"];
-                    console.log(value)
-                    animateScrollTo(value,1000)
-                    // window.scrollTo(0, value)
-                    // Scroll.an
-                  }
-                  // console.log(tab)
+                  scrollToRef(tab_refs[tab])
                 }}
               >
                 <span>{tab}</span>

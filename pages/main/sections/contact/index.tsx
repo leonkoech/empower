@@ -7,17 +7,15 @@ import {
 } from "../../../../public/shared/modules/contact";
 import { contacts } from "../../../../public/shared/models/contacts";
 import Contact_Card from "../../../../public/shared/components/contact/Contact";
-import { useEffect, useRef } from "react";
+import { forwardRef, useEffect, useRef } from "react";
 import MapComponent from "../map";
 import Footer from "../footer/Footer";
 export var contact_height=0;
-const Contact = ({sendHeight}:any) => {
-  const ref = useRef(null)
-  useEffect(()=>{
-    sendHeight((ref.current as any).offsetHeight);
-  })
+
+const Contact = forwardRef(function Contact({}:any, ref:any) {
+ 
   return (
-    <div ref={ref}>
+    <div ref={ref} >
       <div className={`${style.contact_container_primary} ${style.contact_container}`}>
       <div className={style.contact_container_top}>
         <h2>
@@ -42,6 +40,6 @@ const Contact = ({sendHeight}:any) => {
       </div>
       </div> 
   );
-};
+});
 
 export default Contact;
