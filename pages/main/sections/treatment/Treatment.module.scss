@@ -30,7 +30,28 @@
   div{
                 
     h2{
+      @include tablet-down{
+
         text-align: center;
+      }
+
     }
+}
+&__coa{
+  @include center;
+  @include tablet-up{
+    padding: 6%;
+  }
+}
+
+&__row{
+  @include tablet-up{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+ 
+
+
 }
 }

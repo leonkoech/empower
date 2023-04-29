@@ -1,0 +1,23 @@
+@import '../../../../../styles/variables';
+.container{
+    @include center;
+    flex-direction: column;
+    &__image{
+        width: 100%;
+        padding: 10%;
+        @include center;
+        &__implicit{
+            width: auto;
+            height: 100px;
+            text-align: center;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+        }
+    }
+    &__text{
+        text-align: center;
+        padding: 10%;
+    }
+}
+

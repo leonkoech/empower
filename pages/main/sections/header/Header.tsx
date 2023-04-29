@@ -8,9 +8,11 @@ const tabs = [
   "home",
   "about",
   "services",
-  "logourl",
   "treatment",
-  "enroll",
+  "logourl",
+  "housing",
+  "insurance",
+  "admissions",
   "contact"
 ];
 type props = {
@@ -37,7 +39,7 @@ const Header = ({section_heights, loader}:props) => {
   "about": {"from": 0, "to": 0},
   "services":{"from": 0, "to": 0},
   "treatment":{"from": 0, "to": 0},
-  "enroll": {"from": 0, "to": 0},
+  "admissions": {"from": 0, "to": 0},
   "contact": {"from": 0, "to": 0},
 } as tabs)
 
@@ -57,7 +59,7 @@ const Header = ({section_heights, loader}:props) => {
         "about": {"from": head_height+section_heights[0], "to": head_height+section_heights[0]+section_heights[1]}, 
         "services": {"from": head_height+section_heights[0]+section_heights[1], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]},
         "treatment": {"from": head_height+section_heights[0]+section_heights[1]+section_heights[2], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]},
-        "enroll": {"from": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]+section_heights[4]},
+        "admissions": {"from": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]+section_heights[4]},
         "contact": {"from": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]+section_heights[4], "to": head_height+section_heights[0]+section_heights[1]+section_heights[2]+section_heights[3]+section_heights[4]+section_heights[5]},
         }
         select_tab(new_values)

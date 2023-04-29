@@ -15,6 +15,7 @@
     @include tablet-down{
       display: flex;
       flex-direction: column-reverse;
+      height: auto;
     }
   }
   &_description {
@@ -24,7 +25,8 @@
     flex-direction: column;
     justify-content: flex-end;
     @include tablet-down{
-      height:50vh;
+      height: auto;
+      padding: 15% 0;
     }
     &_text {
       text-align: center;
@@ -48,6 +50,7 @@
       height: 40vh;
       aspect-ratio: 3/4;
       border-radius: 24vh 24vh 0px 0px;
+      margin: 15% 0;
     }
   }
 }

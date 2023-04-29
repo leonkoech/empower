@@ -25,3 +25,11 @@ $extra_large: 1800px;
 // shared spacing
 $margin-side-page: 10%;
 $padding-side-page: 12%;
+
+
+@mixin center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}

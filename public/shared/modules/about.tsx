@@ -14,22 +14,17 @@ export const about_data: about[] = [
   {
     title: {
       text: `About ${italic}`,
-      italics: ["Empower"]
+      italics: ["Empower"],
+      bold: []
     },
     details: about_text
   },
   {
     title: {
       text: `Our ${italic}`,
-      italics: ["Commitment"]
+      italics: ["Commitment"],
+      bold:[]
     },
     details: Commitment_text
   },
-  // {
-  //   title: {
-  //     text: `Our ${italic}`,
-  //     italics: ["Mission"]
-  //   },
-  //   details: test_data
-  // }
 ];

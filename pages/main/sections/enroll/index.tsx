@@ -28,7 +28,6 @@ const Enroll = ({sendHeight}:any) => {
             )
           })
         }
-      
     </div>
   );
 };

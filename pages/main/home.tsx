@@ -9,6 +9,9 @@ import Treatment from "./sections/treatment";
 import Enroll from "./sections/enroll";
 import Contact from "./sections/contact";
 import Loader from "./sections/loading";
+import Housing from "./sections/housing";
+import Insurance from "./sections/insurance/insurance";
+import Admissions from "./sections/admissions";
 
 export default function Main() {
   const [home_height, getHomeHeight] = useState<Promise<Number>>();
@@ -32,7 +35,10 @@ export default function Main() {
       <About sendHeight={getAboutHeight}></About>
       <Service sendHeight={getServicesHeight}></Service>
       <Treatment sendHeight={getTreatmentHeight}></Treatment>
-      <Enroll sendHeight={getEnrollHeight}></Enroll>
+      <Housing></Housing>
+      <Insurance></Insurance>
+      <Admissions></Admissions>
+      {/* <Enroll sendHeight={getEnrollHeight}></Enroll> */}
       <Contact sendHeight={getContactHeight}></Contact>
     </main>
   );

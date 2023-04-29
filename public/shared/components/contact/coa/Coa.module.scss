@@ -1,0 +1,52 @@
+@import "../../../../../styles/variables"; 
+@import "../../../../../styles/theme";
+@import '../../../../../styles/screens';
+
+.container{
+    @include center;
+    flex-direction: row;
+    width: 38%;
+    @include tablet-down{
+        width: 100%;
+    }
+    
+    padding: 1% 0;
+    @include theme($sec_52);
+    border: 1px solid transparent;
+    &:hover{
+        cursor: pointer;
+        border: 1px solid $secondary;
+    }
+    &__icon{
+        @include tablet-down{
+            display: none;
+        }
+        width: 35%;
+        @include center;
+        padding: 0 6%;
+        &__implicit{
+            height: auto;
+            width: 80px;
+        }
+    }
+    &__text{
+        @include center;
+        
+        justify-content: start;
+        text-align: left;
+        @include tablet-down{
+            justify-content: center;
+            text-align: center;
+        }
+        width: 65%;
+        
+        div{
+            p, h3{
+                color: $primary;
+            }
+            
+            // padding: 0 6%;
+        }
+    }
+
+}
