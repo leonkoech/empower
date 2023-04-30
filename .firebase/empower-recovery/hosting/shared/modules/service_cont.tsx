@@ -4,8 +4,8 @@ import { services_data } from "./services";
 
 export const service = {
   title: {
-    text: `The ${italic} we offer`,
-    italics: ["services"]
+    text: `${italic} we offer`,
+    italics: ["Services"]
   } as italics,
   list: services_data
 };
