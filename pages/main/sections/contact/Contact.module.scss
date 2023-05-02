@@ -3,61 +3,70 @@
 @import "../../../../styles/screens";
 
 .contact {
-    &_container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
+  &_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 
-        &_primary{
-            @include theme($pri);
-        }
-        &_tertiary{
-            @include theme($ter);
-        }
-
-        &_top, &_map_title {
-            justify-content: center;
-            align-items: center;
-            // min-height: 50vh;
-            @include theme($pri);
-
-            width: 100%;
-            padding: 0% $padding-side-page;
-            padding-top: 108px;
-        }
-
-        &_bottom, &_map {
-            width: 100%;
-            display: flex;
-            flex-direction: row;
-
-            @include theme($pri);
-
-            padding: 0% $padding-side-page;
-            padding-bottom: 54px;
-        }
-        &_map, &_map_title{
-            @include theme($ter);
-
-            padding-top: 54px;
-            h2{
-                margin-bottom: 10px;
-            }
-        }
-       
-
-        @include tablet-down {
-            div{
-                
-                h2{
-                    text-align: center;
-                }
-            }
-            // margin-top: 20%;
-            &_bottom {
-                flex-direction: column;
-            }
-        }
+    &_primary {
+      @include theme($pri);
     }
+    &_tertiary {
+      @include theme($ter);
+    }
+
+    &_top,
+    &_map_title {
+      justify-content: center;
+      align-items: center;
+      // min-height: 50vh;
+      @include theme($pri);
+
+      width: 100%;
+      padding: 0% $padding-side-page;
+      padding-top: 108px;
+    }
+
+    &_bottom,
+    &_map {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+
+      @include theme($pri);
+
+      padding: 0% $padding-side-page;
+      padding-bottom: 54px;
+    }
+    &_map,
+    &_map_title {
+      @include theme($ter);
+
+      padding-top: 54px;
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+
+    @include tablet-down {
+      div {
+        h2 {
+          text-align: center;
+        }
+      }
+      // margin-top: 20%;
+      &_bottom {
+        flex-direction: column;
+      }
+    }
+
+    &__coa {
+      @include center;
+
+      @include tablet-up {
+        padding: 6% 0;
+      }
+    }
+  }
 }

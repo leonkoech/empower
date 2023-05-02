@@ -11,17 +11,17 @@ export const housing_text =
 
 
 
-export const enroll_data: about[] = [{
-  title: {
-    text: `${italic}`,
-    italics: ["Insurance"]
-  } as italics,
-  details: insurance_text
-},{
-  title: {
-    text: `${italic}`,
-    italics: ["Housing"]
-  } as italics,
-  details: housing_text
-}
-];
+// export const enroll_data: about[] = [{
+//   title: {
+//     text: `${italic}`,
+//     italics: ["Insurance"]
+//   } as italics,
+//   details: insurance_text
+// },{
+//   title: {
+//     text: `${italic}`,
+//     italics: ["Housing"]
+//   } as italics,
+//   details: housing_text
+// }
+// ];

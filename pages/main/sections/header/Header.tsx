@@ -2,7 +2,7 @@ import styles from "./Header.module.scss";
 import Image from "next/image";
 import { images } from "../../../../public/shared/modules/images";
 import React, { useState, useRef, useEffect } from "react";
-import { animateScrollTo } from "../../../../public/shared/services/animate";
+// import { animateScrollTo } from "../../../../public/shared/services/animate";
 
 const tabs = [
   "home",
@@ -206,7 +206,7 @@ const Header = ({tab_refs, loader}:props) => {
             aria-label="Empower Recovery Center"
             className={styles.header_logo}
             onClick={() => {
-              animateScrollTo(0,1000)
+              scrollToRef(tab_refs["home"])
             }}
           />
           } else {

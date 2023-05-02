@@ -26,7 +26,7 @@ export default function Main() {
     if((!loaded)&&homeRef && aboutRef  &&  serviceRef  &&  treatmentRef  &&  housingRef  && insuranceRef && admissionsRef && contactRef){
       elementLoaded(true)
     }
-  })
+  },[loaded])
 
   return (
     <main>
