@@ -22,7 +22,7 @@ The design takes minimalistic, modern and professional visuals with use of two d
 
 - [x] Image
   - [x] temporary
-  - [ ] Update
+  - [x] Update
 - [x] Font
   - [x] Type:
       - [x] Italics: `Ibarra Real Nova`
