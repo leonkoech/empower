@@ -1,0 +1,100 @@
+@import '../../../../../styles/variables';
+@import "../../../../../styles/screens";
+@import "../../../../../styles/type";
+
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 0 $padding-side-page;
+  @include tablet-down {
+    grid-template-columns: auto;
+  }
+  &_parent {
+    width: 100%;
+   
+    &__bottom {
+      padding: 0 $padding-side-page;
+      width: inherit;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      textarea,
+      label {
+        width: inherit;
+        padding: 8px;
+        width: 80%;
+        padding: 8px;
+        margin: 5% 10% 5% 0;
+      }
+      textarea {
+        background: transparent;
+        width: 90%;
+        padding: 8px;
+        margin: 0 5% 0 0%;
+        height: 30vh;
+        border: 0;
+        border-bottom: 1px solid $secondary-dark;
+        @include body-regular();
+        color: $secondary-dark;
+        font-family: $font-body;
+      }
+      div {
+        width: 100%;
+        padding: 5% 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 90%;
+        margin: 0 5% 0 0%;
+        button {
+          height: 100px;
+          background-color: $secondary-light;
+          color: $secondary-dark;
+          width: 25%;
+          @include body-regular();
+          font-family: $font-body;
+          border: 1px transparent;
+          &:hover {
+            cursor: pointer;
+            background-color: $secondary-dark;
+            color: $primary;
+          }
+          @include tablet-down{
+            height: 50px;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+  div {
+    width: inherit;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    // label{
+    //     width:
+    // }
+    input,
+    select,
+    label {
+      background: transparent;
+      width: 80%;
+      padding: 8px;
+      margin: 5% 10% 5% 0;
+      border: 0px;
+      @include body-regular();
+      color: $secondary-dark;
+      font-family: $font-body;
+    }
+    input,
+    select {
+      border-bottom: 1px solid $secondary-dark;
+      @include body-regular();
+      color: $secondary-dark;
+      font-family: $font-body;
+    }
+  }
+}

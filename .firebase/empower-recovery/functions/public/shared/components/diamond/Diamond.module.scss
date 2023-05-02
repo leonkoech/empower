@@ -27,7 +27,8 @@
       width: auto;
       aspect-ratio: 1/1;
       @include tablet-up{
-        position: absolute;
+        position: relative;
+        height: unset;
       }
       @include center;
     }

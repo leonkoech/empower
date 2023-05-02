@@ -12,7 +12,7 @@ export var service_height = 0;
 export var team_height = 0;
 export var service_team_height = 0;
 
-const Service = forwardRef(function Service({}:any, ref: any) {
+const Treatment = forwardRef(function Treatment({}:any, ref: any) {
  
   return (
     <div ref={ref} className={`${style.container} ${style.container__theme__secondary}`}>
@@ -43,4 +43,4 @@ const Service = forwardRef(function Service({}:any, ref: any) {
   );
 });
 
-export default Service;
+export default Treatment;

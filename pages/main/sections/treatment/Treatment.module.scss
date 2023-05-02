@@ -87,8 +87,7 @@
   }
 
   &__inner {
-    margin: 5% 0 0;
-    padding: 5% $padding-side-page 0;
+    padding: 0 $padding-side-page;
 
     h2 {
       text-align: center;
@@ -105,7 +104,11 @@
     }
   }
   &__three{
-    height: 70vh;
+    height: 60vh;
     @include center;
   }
+  // &__two{
+  //   height: 35vh;
+  //   padding-top: %;
+  // }
 }

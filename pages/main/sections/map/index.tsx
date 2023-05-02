@@ -1,10 +1,9 @@
-// import style from "";
 import style from "../contact/Contact.module.scss"
 import Italicized from "../../../../public/shared/components/italicized/Italicized";
 import {map_title} from "../../../../public/shared/modules/contact";
+import { iframe_src } from "../../../../public/shared/services/map";
 
 const MapComponent = () =>{
-  const iframe_src = "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJiyN69GoUK4cRL0xMGoEWsa4&key=AIzaSyCmohzLBls4xBJXze9aHtToLWDPttDzDEg&zoom=18";
 
 return (
     <div className={`${style.contact_container_tertiary} ${style.contact_container}`}>
