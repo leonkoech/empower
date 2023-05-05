@@ -5,8 +5,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Empower Recovery Center</title>
-        <meta name="description" content="Empower Recovery Center Arizona. Expert Mental Health and Psychiatric Care in Arizona. We offer compassionate inpatient and outpatient services for addiction and mental health disorders." />
+        <title>Empower Recovery Center Arizona</title>
+        <meta name="description" content="Expert Mental Health and Psychiatric Care in Phoenix Arizona. We offer compassionate inpatient and outpatient services for addiction and mental health disorders." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
