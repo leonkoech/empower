@@ -15,6 +15,7 @@ TDD - Technical Design Document. Some requirements and specs for the Empower web
 5. SEO requirements
 6. QA requirements
 7. Hosting requirements
+8. Requaeted Features
 
 ### 1. Design Requirements
 
@@ -61,7 +62,13 @@ The website has to be responsive for mobile, tablet, and desktop. So mockups hav
 **_Development_**
 
 Taking the _desktop first_ approach
-  
+- [x] file structuring 
+    - [x] Models
+    - [x] Modules
+    - [x] Styles with mixins
+    - [x] Assets
+    - [x] `.env` for APIs
+
 - [x] Desktop Development
     - [x] home
     - [x] about
@@ -114,7 +121,7 @@ A simple google search would present the empower website if this is added, also 
 
 - [x] tags
 - [x] title
-- [x] description
+- [x] description ++
 - [x] sitemap
 
 ### 6. QA requirements
@@ -122,8 +129,8 @@ A simple google search would present the empower website if this is added, also 
 `QA` - Quality Assurance
 Quality assurance involves checking the website for; 
  
-- [ ] Bugs + Features
-- [ ] Accessibility 
+- [x] Bugs + Features
+- [x] Accessibility 
 - [x] SEO
 - [x] performance
 
@@ -135,10 +142,21 @@ Hosting would be on `Google Cloud`, and `GitHub` with GitHub actions for an easi
 GitHub access to the repository and Project Access on Google Cloud  will be given to samiirah@empowerrc.com (owner) and leonkipkoech00@gmail.com (admin)
  
 - [x] Set Up GitHub Repository
-- [ ] Set Up Google Cloud Project 
-- [ ] Set Up Accounts
-- [ ] Host
-- [ ] Test CI/CD pipelines
+- [x] Set Up Google Cloud Project 
+- [x] Set Up Accounts
+- [x] Host
+- [x] Test CI/CD pipelines
+
+### 8. Requested features
+
+Some features were requested by the client after a certain step
+These features are the following (checkboxes as to whether they were completed or WIPs) ;
+
+- [x] Images to some description
+- [x] Map component for location
+- [ ] Contact form that sends email
+     - [x] front-end with responsiveness
+     - [ ] backend functionalities
 
 
 **More technical specs will be on the ReadMe of the project. They will also be available on a google docs that will provide details about the project setup (The main TDD)
