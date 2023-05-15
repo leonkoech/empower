@@ -26,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       to: message_data.email, // list of receivers
       subject: message_data.subject, // Subject line
       text: message_data.message, // plain text body
-      html: message_html(message_data), // html body
+      html:  message_data.html_message, // html body
     });
   
     console.log("Message sent: %s", info.messageId);

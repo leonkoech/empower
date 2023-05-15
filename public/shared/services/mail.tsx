@@ -2,11 +2,12 @@ import {email} from '../models/email'
 
 
 export const send_email = async (message_data: email) => {
-    const message = email_structure(message_data)
-    const subject = email_subject(message_data)
+    
 
-    message_data.message = message;
-    (message_data as any).subject = subject
+    message_data.message = email_structure(message_data);
+    (message_data as any).subject = email_subject(message_data);
+    (message_data as any).html_message = message_html(message_data)
+
     try{
         fetch('http://localhost:3000/api/mail', {
             method: 'POST',
@@ -50,6 +51,6 @@ const message_html=(message:any)=>{
         else{
             final_message += `<h3>${key}</h3>`
         }
-        final_message += `</br> <p>${value}</p>`
+        final_message += `<br></br> <p>${value}</p>`
     }
 }
