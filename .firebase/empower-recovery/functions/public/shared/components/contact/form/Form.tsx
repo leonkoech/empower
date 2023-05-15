@@ -40,23 +40,23 @@ const Form = () => {
       
       <div className={style.container}>
         <div>
-          <label>First and last name*</label>
+          <label htmlFor="name">First and last name*</label>
           <input placeholder="eg. John Doe" type="text" name="name" ref={name} required/>
         </div>
         <div>
-          <label>Email Address*</label>
+          <label htmlFor="email">Email Address*</label>
           <input placeholder="eg johndoe@mail.com" type="email" name="email"  ref={email}  required/>
         </div>
         <div>
-          <label>Phone*</label>
+          <label htmlFor="phone">Phone*</label>
           <input placeholder="(123) 456-7890" type="phone" name="phone"  ref={phone}  required />
         </div>
         <div>
-          <label>Zip Code</label>
+          <label htmlFor="zip">Zip Code</label>
           <input placeholder="12345" type="number" name="zip"  ref={zip}   />
         </div>
         <div>
-          <label>Relation to client*</label>
+          <label htmlFor="relation">Relation to client*</label>
           <select placeholder="Relation to client" name="relation" ref={relation} required>
             <option value={""}>select</option>
             <option value={"Self"}>Self</option>
@@ -66,7 +66,7 @@ const Form = () => {
           </select>
         </div>
         <div>
-          <label>Program Interest</label>
+          <label htmlFor="program">Program Interest</label>
           <select placeholder="Which Program Interests You?" name="program" ref={program}>
             <option value={""}>select</option>
             <option value={"IOP"}>IOP</option>
@@ -76,15 +76,15 @@ const Form = () => {
           </select>
         </div>
         <div>
-          <label>insurance Carrier</label>
+          <label htmlFor="insurance">insurance Carrier</label>
           <input placeholder="eg Mercy Care" type="text" name="insurance" ref={insurance}/>
         </div>
         <div>
-          <label>Preferred Admission Date</label>
+          <label htmlFor="date">Preferred Admission Date</label>
           <input type="date" name="date" ref={date}/>
         </div>
         <div>
-          <label>Message</label>
+          <label htmlFor="message">Message</label>
         </div>
       </div>
       <div className={style.container_parent__bottom}>

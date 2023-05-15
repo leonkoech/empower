@@ -3,6 +3,7 @@ import style from "./Form.module.scss";
 import { italic } from "../../../modules/italics";
 import { useRef } from "react";
 import { email } from "../../../models/email";
+import { send_email } from "../../../services/mail";
 
 const Form = () => {
   const name =  useRef(null)
@@ -20,7 +21,7 @@ const Form = () => {
   function get_value(element: any){
       return (element.current!.value).length > 0?element.current!.value:undefined
   }
-  function submit_form(){
+  async function submit_form(){
     const res = {
       name: get_value(name),
       email: get_value(email),
@@ -33,6 +34,7 @@ const Form = () => {
       message: get_value(message),
     } as email;
     console.log(res)
+    await send_email(res)
     console.log("hello")
   }
   return (
@@ -90,7 +92,7 @@ const Form = () => {
       <div className={style.container_parent__bottom}>
         <textarea placeholder="message" cols={8} name="message" ref={message}/>
         <div>
-          <button type="submit" onClick={()=>{submit_form()}}>submit</button>
+          <button type="submit" onClick={(e)=>{e.preventDefault(); submit_form()}}>submit</button>
         </div>
       </div>
     </div>
