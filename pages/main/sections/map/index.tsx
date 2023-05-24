@@ -12,7 +12,7 @@ return (
           <Italicized word={map_title}></Italicized>
         </h2>
       </div>
-      <iframe className={style.contact_container_map} width="100%" height="450"  style={{border:0}} loading="lazy" allowFullScreen src={iframe_src}></iframe>
+      <iframe className={style.contact_container_map} width="100%" height="450"  style={{border:0}} loading="lazy" allowFullScreen src={iframe_src} title="map location"></iframe>
     </div>
 );
 }
