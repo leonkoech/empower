@@ -8,7 +8,6 @@ export const services_data: string[] = [
   "Family Counseling",
   "Nutrition Education",
   "Court Mandated Services",
-  "Housing Assistance",
   "Transportation for appointments",
   "Online IOP"
 ];
