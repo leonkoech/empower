@@ -14,7 +14,7 @@ export const contact_data: contacts[] = [
   },
   {
     title: "hours",
-    list: [ "MONDAY 8 AM- 5 PM", "TUESDAY 8 AM- 5 PM", "WEDNESDAY 8 AM- 5 PM", "THURSDAY 8 AM- 5 PM", "FRIDAY 8 AM- 5 PM", "WEEKEND BY APPOINTMENT ONLY"]
+    list: [ "MONDAY 9 AM- 1 PM", "TUESDAY 9 AM- 1 PM", "WEDNESDAY 9 AM- 1 PM", "THURSDAY 9 AM- 1 PM", "FRIDAY 9 AM- 1 PM", "WEEKEND BY APPOINTMENT ONLY"]
   }
 ];
 

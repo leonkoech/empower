@@ -5,12 +5,10 @@ import React, { useState, useRef, useEffect } from "react";
 // import { animateScrollTo } from "../../../../public/shared/services/animate";
 
 const tabs = [
-  "home",
   "about",
-  "services",
   "treatment",
+  "services",
   "logourl",
-  "housing",
   "insurance",
   "admissions",
   "contact"
@@ -19,8 +17,8 @@ const tabs = [
 interface TabRefs {
   home: any;
   about: any;
-  services: any;
   treatment: any;
+  services: any;
   logourl: any;
   housing: any;
   insurance: any;
@@ -28,17 +26,6 @@ interface TabRefs {
   contact: any;
 }
 
-const tab_refs: any = {
-  home: undefined,
-  about: undefined,
-  services: undefined,
-  treatment: undefined,
-  logourl: undefined,
-  housing: undefined,
-  insurance: undefined,
-  admissions: undefined,
-  contact: undefined,
-};
 
 type props = {
   tab_refs: any,

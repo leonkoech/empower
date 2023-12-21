@@ -15,18 +15,20 @@ export const treatment_data: string[]=[
 ]
 
 export const treatment_details: italics[] = [
-    {   text: `To guarantee continuity of care, we offer three levels \
-    of treatment: ${bold} , ${bold} , and ${bold}`,
+    {   text: `To guarantee continuity of care, we offer two levels \
+    of treatment:  ${bold} , and ${bold}`,
         italics: [""],
-        bold: ["Partial hospitalization program","Intensive Outpatient Program", "Outpatient services"]
+        bold: [
+          // "Partial hospitalization program",
+          "Intensive Outpatient Program", "Outpatient services"]
       } as italics,
-    {   text: `Our ${italic} is our highest level of care. The program typically meets 6 hours a day. 6-7 day a week, and lasts 12 weeks.\
-                This program is ideal for people transitioning from a residential inpatient facility whi need more support\
-                and, intensive therapy
-    `,
-        italics: ["PHP (Partial Hospitalization Program)"],
-        bold:[""]
-      } as italics,
+    // {   text: `Our ${italic} is our highest level of care. The program typically meets 6 hours a day. 6-7 day a week, and lasts 12 weeks.\
+    //             This program is ideal for people transitioning from a residential inpatient facility whi need more support\
+    //             and, intensive therapy
+    // `,
+    //     italics: ["PHP (Partial Hospitalization Program)"],
+    //     bold:[""]
+    //   } as italics,
       {
         text: `Our ${italic} program meets 3-6 hours a day up to 5 days a week, depending on individual needs. To successfully graduate,\
                clients must attend for 12 weeks. This program who need structure yet continue working and attending school part-time\
